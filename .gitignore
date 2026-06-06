@@ -1,0 +1,30 @@
+# Hydra run outputs
+outputs/
+multirun/
+
+# Generated datasets
+data/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Environments
+.venv/
+.env
+
+# Caches / editors
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.DS_Store
+.vscode/
+.idea/
+
+# Keras / weights artifacts left at repo root by accident
+*.keras
+*.weights.h5

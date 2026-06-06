@@ -1,0 +1,27 @@
+# Root Hydra config. Composes one choice from every config group, layered on top of the
+# `base_config` structured schema (registered in hydraflow.config.schema). `_self_` is last so
+# values set here win over group defaults.
+defaults:
+  - base_config
+  - simulator: skeleton
+  - model: default
+  - data: default
+  - training: default
+  - preprocessing: default
+  - augmentation: default
+  - adapter: default
+  - inference: default
+  - eval: default
+  - tuning: default
+  - _self_
+
+seed: 42
+
+# Full traceability: every run lands in a timestamped dir keyed by simulator + model, and Hydra
+# writes the resolved config into its `.hydra/` subfolder automatically.
+hydra:
+  run:
+    dir: outputs/${simulator.name}/${model.name}/${now:%Y-%m-%d_%H-%M-%S}
+  sweep:
+    dir: multirun/${simulator.name}/${model.name}/${now:%Y-%m-%d_%H-%M-%S}
+    subdir: ${hydra.job.num}

@@ -1,0 +1,10 @@
+# Lightweight permutation-invariant encoder (no attention). Cheaper than the set transformer.
+defaults:
+  - base_summary_network
+
+type: deep_set
+summary_dim: 32
+num_blocks: 2
+mlp_depth: 2
+mlp_width: 128
+dropout: 0.05

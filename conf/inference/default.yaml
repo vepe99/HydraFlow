@@ -1,0 +1,5 @@
+defaults:
+  - base_inference
+
+num_samples: 1000
+batch_size: 256

@@ -1,0 +1,11 @@
+# Maps raw dataset keys to BayesFlow roles. With a single observable, `summary_variables` has one
+# entry (fed to the summary network); list multiple keys to enable fusion (see pipeline/adapter).
+# `inference_variables` should be your simulator's parameter_names.
+defaults:
+  - base_adapter
+
+inference_variables: ???   # e.g. [theta1, theta2] — set per simulator (override on the CLI/config)
+summary_variables:
+  - x
+inference_conditions: []
+drop: []
