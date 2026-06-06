@@ -9,6 +9,13 @@ storage_dir: ${data.data_dir}/tuning
 n_trials: 50
 directions: [minimize, minimize]
 n_epochs: 10   # short budget per trial
+
+# Save every trial's model + posterior + diagnostic plots, and the shared (fit-once) preprocessing
+# state, under artifacts_dir. The Optuna study itself is stored in a concurrency-safe `.log`
+# (JournalStorage) at ${storage_dir}/${study_name}.log so many processes can tune the same study
+# at once. Set save_artifacts: false to keep only best_trials.json.
+save_artifacts: true
+artifacts_dir: ${tuning.storage_dir}/${tuning.study_name}
 search_space:
   model.summary_network.summary_dim:
     type: int

@@ -15,9 +15,11 @@ Everything else is fixed infrastructure you should not need to touch.
 > **New here?** The [end-to-end pipeline guide](docs/end_to_end_guide.md) is a runnable,
 > step-by-step tutorial covering a worked example simulator, the `conf/` system, adding summary /
 > inference networks, and hyperparameter tuning. See also the
-> [Two Moons pipeline](docs/two_moons_pipeline.md) (a ready-to-run example) and
+> [Two Moons pipeline](docs/two_moons_pipeline.md) (a ready-to-run example),
 > [bring your own data](docs/bring_your_own_data.md) (train/evaluate on pre-existing simulations
-> with no simulator, and how to support file formats other than `.npz`).
+> with no simulator, and how to support file formats other than `.npz`), and
+> [hyperparameter tuning](docs/hyperparameter_tuning.md) (Optuna studies that save every trial and
+> run concurrently across processes).
 
 ## Design at a glance
 

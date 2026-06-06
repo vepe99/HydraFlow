@@ -190,6 +190,11 @@ class TuningConfig:
     n_epochs: int = 10  # short training budget per trial
     # name -> {type: int|float|categorical, low, high, step, log, choices}
     search_space: Dict[str, Any] = field(default_factory=dict)
+    # Persist every trial (trained model + posterior + diagnostic plots) and the shared, fit-once
+    # preprocessing state under `artifacts_dir`. Keyed by the (study-global) Optuna trial number so
+    # several processes pointing at the same study cooperatively fill one directory.
+    save_artifacts: bool = True
+    artifacts_dir: str = "${tuning.storage_dir}/${tuning.study_name}"
 
 
 # --------------------------------------------------------------------------------------------- #
