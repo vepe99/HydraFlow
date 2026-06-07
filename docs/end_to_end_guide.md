@@ -1,7 +1,7 @@
-# HydraFlow — End-to-End Pipeline Guide
+# HydraBFlow — End-to-End Pipeline Guide
 
 This is a hands-on walkthrough for standing up a complete Simulation-Based Inference (SBI)
-pipeline with HydraFlow. We thread one concrete example — a trivial 2-parameter **Gaussian**
+pipeline with HydraBFlow. We thread one concrete example — a trivial 2-parameter **Gaussian**
 simulator — through every section so the commands are runnable, not abstract.
 
 By the end you will know how to:
@@ -25,11 +25,11 @@ By the end you will know how to:
 
 ```bash
 uv sync                      # resolves bayesflow, keras, jax, hydra, optuna, ...
-uv run python -c "import hydraflow"   # smoke test; pins KERAS_BACKEND=jax on import
+uv run python -c "import hydrabflow"   # smoke test; pins KERAS_BACKEND=jax on import
 ```
 
-The JAX backend is pinned for you in [src/hydraflow/utils/backend.py](../src/hydraflow/utils/backend.py)
-(imported first by [src/hydraflow/__init__.py](../src/hydraflow/__init__.py)) via
+The JAX backend is pinned for you in [src/hydrabflow/utils/backend.py](../src/hydrabflow/utils/backend.py)
+(imported first by [src/hydrabflow/__init__.py](../src/hydrabflow/__init__.py)) via
 `os.environ.setdefault("KERAS_BACKEND", "jax")`. Override with `KERAS_BACKEND=tensorflow uv run ...`
 if you must, but JAX is the supported default.
 
@@ -37,13 +37,13 @@ There are two equivalent ways to launch each stage — pick one and stay consist
 
 | Stage          | Console script             | Script file                                      |
 | -------------- | -------------------------- | ------------------------------------------------ |
-| simulate       | `hydraflow-simulate`       | `uv run python scripts/simulate.py`              |
-| train          | `hydraflow-train`          | `uv run python scripts/train.py`                 |
-| evaluate       | `hydraflow-evaluate`       | `uv run python scripts/evaluate.py`              |
-| evaluate-real  | `hydraflow-evaluate-real`  | `uv run python scripts/evaluate_real.py`         |
-| tune           | `hydraflow-tune`           | `uv run python scripts/tune.py`                  |
+| simulate       | `hydrabflow-simulate`       | `uv run python scripts/simulate.py`              |
+| train          | `hydrabflow-train`          | `uv run python scripts/train.py`                 |
+| evaluate       | `hydrabflow-evaluate`       | `uv run python scripts/evaluate.py`              |
+| evaluate-real  | `hydrabflow-evaluate-real`  | `uv run python scripts/evaluate_real.py`         |
+| tune           | `hydrabflow-tune`           | `uv run python scripts/tune.py`                  |
 
-Both are thin [Hydra](https://hydra.cc) apps over `hydraflow.pipeline.<stage>`. This guide uses the
+Both are thin [Hydra](https://hydra.cc) apps over `hydrabflow.pipeline.<stage>`. This guide uses the
 `uv run python scripts/...` form.
 
 ---
@@ -79,19 +79,19 @@ completed `train` run.
 ## 2. Changing the simulator
 
 The simulator is the **only** Python you must write. The shipped
-[SkeletonSimulator](../src/hydraflow/simulators/skeleton.py) declares a 2-parameter /
+[SkeletonSimulator](../src/hydrabflow/simulators/skeleton.py) declares a 2-parameter /
 single-observable interface so the whole pipeline composes, but every forward call raises
 `NotImplementedError`. We will replace it with a real one.
 
 ### 2a. Write the simulator class
 
-A simulator subclasses [BaseSimulator](../src/hydraflow/simulators/base.py) and implements four
+A simulator subclasses [BaseSimulator](../src/hydrabflow/simulators/base.py) and implements four
 things. The shape contract (leading axis = number of simulations `n`):
 
 - `sample_prior(n, rng)` → `{param_name: (n, 1)}`
 - `simulate(params, rng)` → `{observable_key: (n, *event_shape)}`
 
-Create **`src/hydraflow/simulators/gaussian.py`**:
+Create **`src/hydrabflow/simulators/gaussian.py`**:
 
 ```python
 """A tiny worked-example simulator: infer the mean of a 2-D Gaussian from a set of draws."""
@@ -102,8 +102,8 @@ from typing import Dict, Mapping
 
 import numpy as np
 
-from hydraflow.simulators.base import BaseSimulator
-from hydraflow.simulators.registry import register_simulator
+from hydrabflow.simulators.base import BaseSimulator
+from hydrabflow.simulators.registry import register_simulator
 
 
 @register_simulator("gaussian")          # <-- self-registers under this name
@@ -144,11 +144,11 @@ class GaussianSimulator(BaseSimulator):
 ### 2b. Make it self-register
 
 Components only register when their module is imported. Add the import to
-[src/hydraflow/simulators/\_\_init\_\_.py](../src/hydraflow/simulators/__init__.py):
+[src/hydrabflow/simulators/\_\_init\_\_.py](../src/hydrabflow/simulators/__init__.py):
 
 ```python
-from hydraflow.simulators import skeleton   # noqa: F401  (existing)
-from hydraflow.simulators import gaussian    # noqa: F401  (self-registers "gaussian")  <-- add
+from hydrabflow.simulators import skeleton   # noqa: F401  (existing)
+from hydrabflow.simulators import gaussian    # noqa: F401  (self-registers "gaussian")  <-- add
 ```
 
 Skip this and you get a clear error from `get_simulator`:
@@ -217,7 +217,7 @@ see [conf/data/default.yaml](../conf/data/default.yaml)).
 
 ## 3. Using `conf/`
 
-HydraFlow is **Hydra-native**: there is no argparse. The root file
+HydraBFlow is **Hydra-native**: there is no argparse. The root file
 [conf/config.yaml](../conf/config.yaml) composes exactly one choice from every config *group*:
 
 ```yaml
@@ -241,7 +241,7 @@ Each group is a folder under `conf/`; each `.yaml` in it is one selectable optio
 `summary_network: set_transformer` and `inference_network: flow_matching`.
 
 Every group YAML starts with `defaults: [- base_<group>]`. That `base_<group>` is the **typed
-dataclass schema** from [src/hydraflow/config/schema.py](../src/hydraflow/config/schema.py),
+dataclass schema** from [src/hydrabflow/config/schema.py](../src/hydrabflow/config/schema.py),
 registered in Hydra's `ConfigStore`. It is what catches typos and wrong types before training
 starts — set a string where an int is expected and composition fails immediately.
 
@@ -300,7 +300,7 @@ Worked example: a recurrent **GRU** summary network for ordered/time-series obse
 
 ### Step 1 — add a branch to the factory
 
-Edit [`build_summary_network`](../src/hydraflow/networks/factory.py):
+Edit [`build_summary_network`](../src/hydrabflow/networks/factory.py):
 
 ```python
     if t == "deep_set":
@@ -328,7 +328,7 @@ Edit [`build_summary_network`](../src/hydraflow/networks/factory.py):
 
 ### Step 2 — (only if you need new hyperparameters) extend the schema
 
-`SummaryNetworkConfig` in [src/hydraflow/config/schema.py](../src/hydraflow/config/schema.py)
+`SummaryNetworkConfig` in [src/hydrabflow/config/schema.py](../src/hydrabflow/config/schema.py)
 already exposes `summary_dim, num_blocks, num_heads, embed_dim, mlp_depth, mlp_width, dropout`. If
 your network needs a knob none of those cover, add a typed field with a default:
 
@@ -379,7 +379,7 @@ Identical 3-step pattern, against the inference side. Shipped types are `flow_ma
 
 ### Step 1 — branch in the factory
 
-Edit [`build_inference_network`](../src/hydraflow/networks/factory.py):
+Edit [`build_inference_network`](../src/hydrabflow/networks/factory.py):
 
 ```python
     if t == "diffusion":
@@ -437,7 +437,7 @@ minimize both validation RMSE and calibration error.
 uv run python scripts/tune.py simulator=gaussian
 ```
 
-What happens (see [src/hydraflow/pipeline/tune.py](../src/hydraflow/pipeline/tune.py)):
+What happens (see [src/hydrabflow/pipeline/tune.py](../src/hydrabflow/pipeline/tune.py)):
 
 1. The dataset is loaded and preprocessed **once** (train/val split reused across all trials).
 2. Each trial deep-copies the config and applies its sampled hyperparameters with
@@ -451,7 +451,7 @@ What happens (see [src/hydraflow/pipeline/tune.py](../src/hydraflow/pipeline/tun
 Knobs in the config:
 
 ```yaml
-study_name: hydraflow_study
+study_name: hydrabflow_study
 storage_dir: ${data.data_dir}/tuning      # sqlite db lives here: <storage_dir>/<study_name>.db
 n_trials: 50
 directions: [minimize, minimize]          # two objectives -> Pareto front
@@ -538,7 +538,7 @@ Example categorical entry:
 # 0. install
 uv sync
 
-# 1. (one-time code) add src/hydraflow/simulators/gaussian.py,
+# 1. (one-time code) add src/hydrabflow/simulators/gaussian.py,
 #    import it in simulators/__init__.py,
 #    add conf/simulator/gaussian.yaml,
 #    set adapter.inference_variables=[mu1,mu2] in conf/adapter/default.yaml

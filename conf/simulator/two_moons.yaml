@@ -1,5 +1,5 @@
 # Two Moons benchmark (bimodal posterior). Forward model:
-# src/hydraflow/simulators/two_moons.py. Observable `x` has shape (n, n_obs, 2).
+# src/hydrabflow/simulators/two_moons.py. Observable `x` has shape (n, n_obs, 2).
 # Pair with `adapter=two_moons` so the parameter names / observable key are wired correctly.
 defaults:
   - base_simulator

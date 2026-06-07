@@ -17,7 +17,7 @@ def compose_cfg(overrides=None):
     from hydra import compose, initialize_config_dir
     from hydra.core.global_hydra import GlobalHydra
 
-    from hydraflow.config import register_configs
+    from hydrabflow.config import register_configs
 
     register_configs()
     base = ["adapter.inference_variables=[theta1,theta2]"]

@@ -1,7 +1,7 @@
 # Running a full pipeline with the Two Moons simulator
 
-This is a copy-pasteable walkthrough of a **complete HydraFlow run — training *and* evaluation —**
-on the shipped [`two_moons`](../src/hydraflow/simulators/two_moons.py) simulator (the classic
+This is a copy-pasteable walkthrough of a **complete HydraBFlow run — training *and* evaluation —**
+on the shipped [`two_moons`](../src/hydrabflow/simulators/two_moons.py) simulator (the classic
 bimodal SBI benchmark). Nothing here needs code changes: the simulator, its config, and a matching
 adapter all ship with the template. You only run the stages.
 
@@ -38,7 +38,7 @@ Every command below selects both groups with `simulator=two_moons adapter=two_mo
 uv sync          # create .venv and install BayesFlow / JAX / Hydra / ...
 ```
 
-The JAX backend for Keras is pinned automatically (`hydraflow.utils.backend`), so you don't set
+The JAX backend for Keras is pinned automatically (`hydrabflow.utils.backend`), so you don't set
 `KERAS_BACKEND` yourself. All commands are run with `uv run` so they use the project venv.
 
 ---
@@ -173,7 +173,7 @@ uv run python scripts/train.py \
   +augmentation.params.noise_scale=0.02
 ```
 
-Available example augmentations (see [`augmentation/examples.py`](../src/hydraflow/augmentation/examples.py)):
+Available example augmentations (see [`augmentation/examples.py`](../src/hydrabflow/augmentation/examples.py)):
 `gaussian_noise` (additive), `multiplicative_noise` (gain jitter, `+augmentation.params.mult_scale=`),
 `feature_dropout` (random masking, `+augmentation.params.dropout_prob=`). Each is a no-op at its
 default strength. Evaluate exactly as in step 2.4 (augmentations apply at training time only).

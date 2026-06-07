@@ -27,7 +27,7 @@ def _batch(n=8, n_obs=4, d=2):
 
 def _build_one(name, seed, params=STRONG_PARAMS):
     """Build a single augmentation through the public registry with a seeded generator."""
-    from hydraflow.augmentation.registry import _REGISTRY
+    from hydrabflow.augmentation.registry import _REGISTRY
 
     rng = np.random.default_rng(seed)
     # rng.spawn(1) mirrors how build_augmentations isolates each step's stream.
@@ -40,7 +40,7 @@ def _build_one(name, seed, params=STRONG_PARAMS):
 
 
 def test_all_examples_registered():
-    from hydraflow.augmentation.registry import available_augmentations
+    from hydrabflow.augmentation.registry import available_augmentations
 
     for name in ALL_AUGS:
         assert name in available_augmentations()
@@ -100,7 +100,7 @@ def test_does_not_touch_global_numpy_state(name):
 
 
 def _compose_aug(compose, steps, seed):
-    from hydraflow.augmentation.registry import build_augmentations
+    from hydrabflow.augmentation.registry import build_augmentations
 
     cfg = compose(
         [
@@ -138,13 +138,13 @@ def test_per_step_streams_are_independent(compose):
 
 
 def test_two_moons_registered():
-    from hydraflow.simulators.registry import available_simulators
+    from hydrabflow.simulators.registry import available_simulators
 
     assert "two_moons" in available_simulators()
 
 
 def test_two_moons_shapes_and_reproducibility():
-    from hydraflow.simulators.registry import get_simulator
+    from hydrabflow.simulators.registry import get_simulator
 
     class _Cfg:
         name = "two_moons"

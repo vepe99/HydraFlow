@@ -1,8 +1,8 @@
 # Bring your own data (no simulator) & supporting other file formats
 
-HydraFlow's `simulate` stage exists to *generate* a dataset from a forward model. But the
+HydraBFlow's `simulate` stage exists to *generate* a dataset from a forward model. But the
 downstream stages don't depend on it: **`train`, `evaluate`, `evaluate_real`, and `tune` only ever
-touch a dataset through one function pair** — [`io.load_dataset` / `io.save_dataset`](../src/hydraflow/pipeline/io.py).
+touch a dataset through one function pair** — [`io.load_dataset` / `io.save_dataset`](../src/hydrabflow/pipeline/io.py).
 They never instantiate a simulator. That makes two things easy:
 
 - **Part A** — train and evaluate on simulations you already ran elsewhere, with no simulator code.
@@ -21,7 +21,7 @@ For the conceptual tour of the config system and stages, see the
 
 A dataset is a flat mapping `key -> array` where **every array shares the same leading axis** = the
 number of simulations (one (parameters, observation) pair per row). This is exactly what
-[`io.load_dataset`](../src/hydraflow/pipeline/io.py#L25) returns and what the BayesFlow adapter
+[`io.load_dataset`](../src/hydrabflow/pipeline/io.py#L25) returns and what the BayesFlow adapter
 consumes.
 
 | Kind of key | Shape convention | Example |
@@ -75,7 +75,7 @@ params: {}
 ```
 
 Create `conf/adapter/mydata.yaml` mapping **your file's keys** to BayesFlow roles
-(see [`AdapterConfig`](../src/hydraflow/config/schema.py#L142)):
+(see [`AdapterConfig`](../src/hydrabflow/config/schema.py#L142)):
 
 ```yaml
 defaults:
@@ -149,7 +149,7 @@ interpolation:
 ### B.1 The single seam
 
 All dataset IO funnels through two functions in
-[`src/hydraflow/pipeline/io.py`](../src/hydraflow/pipeline/io.py):
+[`src/hydrabflow/pipeline/io.py`](../src/hydrabflow/pipeline/io.py):
 
 ```python
 def save_dataset(path: str, data: Dataset) -> None: ...   # used only by simulate
@@ -157,21 +157,21 @@ def load_dataset(path: str) -> Dataset: ...               # used by train / eval
 ```
 
 `Dataset = Dict[str, np.ndarray]`. Every stage imports `io` and calls these — verified call sites:
-[train.py:34](../src/hydraflow/pipeline/train.py#L34), [evaluate.py:48](../src/hydraflow/pipeline/evaluate.py#L48),
-[evaluate_real.py:47](../src/hydraflow/pipeline/evaluate_real.py#L47), [tune.py:89](../src/hydraflow/pipeline/tune.py#L89),
-[simulate.py:44](../src/hydraflow/pipeline/simulate.py#L44). **Change these two functions and the
+[train.py:34](../src/hydrabflow/pipeline/train.py#L34), [evaluate.py:48](../src/hydrabflow/pipeline/evaluate.py#L48),
+[evaluate_real.py:47](../src/hydrabflow/pipeline/evaluate_real.py#L47), [tune.py:89](../src/hydrabflow/pipeline/tune.py#L89),
+[simulate.py:44](../src/hydrabflow/pipeline/simulate.py#L44). **Change these two functions and the
 whole pipeline changes format** — no stage code is touched.
 
 What is **not** part of this seam (separate `.npz` uses, leave alone unless you specifically want
 to change them):
 
 - **Preprocessing state** — fitted state is persisted by the preprocessing module itself in
-  [`preprocessing/base.py`](../src/hydraflow/preprocessing/base.py#L85) (`preprocessing_state.npz`).
+  [`preprocessing/base.py`](../src/hydrabflow/preprocessing/base.py#L85) (`preprocessing_state.npz`).
   Internal artifact, not your dataset.
-- **Posterior output** — written with a direct `np.savez` in [evaluate.py:59](../src/hydraflow/pipeline/evaluate.py#L59)
-  and [evaluate_real.py:56](../src/hydraflow/pipeline/evaluate_real.py#L56) (`posterior.npz`).
+- **Posterior output** — written with a direct `np.savez` in [evaluate.py:59](../src/hydrabflow/pipeline/evaluate.py#L59)
+  and [evaluate_real.py:56](../src/hydrabflow/pipeline/evaluate_real.py#L56) (`posterior.npz`).
   Output, not input. If you want posteriors in another format, change those two lines too.
-- **Model** — saved as `.keras` in [`checkpoint.py`](../src/hydraflow/pipeline/checkpoint.py)
+- **Model** — saved as `.keras` in [`checkpoint.py`](../src/hydrabflow/pipeline/checkpoint.py)
   (BayesFlow's own serialization). Unrelated to dataset format.
 
 ### B.2 Option 1 — Quick swap (one format, replace the body)
@@ -180,7 +180,7 @@ The minimal change: keep the signatures, swap the implementation. Example for HD
 (`pip install h5py`):
 
 ```python
-# src/hydraflow/pipeline/io.py
+# src/hydrabflow/pipeline/io.py
 import h5py
 import numpy as np
 
@@ -216,7 +216,7 @@ public `load_dataset` / `save_dataset` signatures identical (so no stage changes
 formats a small, self-contained addition — mirroring how simulators/augmentations self-register
 elsewhere in the template.
 
-Replace the body of [`io.py`](../src/hydraflow/pipeline/io.py) with:
+Replace the body of [`io.py`](../src/hydrabflow/pipeline/io.py) with:
 
 ```python
 """Dataset IO. A dataset is Dict[str, np.ndarray]; every array shares the leading (row) axis.
@@ -227,7 +227,7 @@ import os
 from typing import Callable, Dict
 
 import numpy as np
-from hydraflow.utils.logging import get_logger
+from hydrabflow.utils.logging import get_logger
 
 log = get_logger(__name__)
 Dataset = Dict[str, np.ndarray]
@@ -347,9 +347,9 @@ def check_dataset(data: Dataset, cfg) -> None:
 
 **New file format:**
 
-- [ ] Edit only [`io.py`](../src/hydraflow/pipeline/io.py) — `load_dataset` / `save_dataset` (Option 1)
+- [ ] Edit only [`io.py`](../src/hydrabflow/pipeline/io.py) — `load_dataset` / `save_dataset` (Option 1)
       or register by extension (Option 2)
 - [ ] Update `dataset_name` / `test_dataset_name` / `real_data_path` extensions in `conf/`
 - [ ] (Optional) also change posterior output (`np.savez` in evaluate / evaluate_real) and
-      preprocessing-state IO ([`preprocessing/base.py`](../src/hydraflow/preprocessing/base.py)) if
+      preprocessing-state IO ([`preprocessing/base.py`](../src/hydrabflow/preprocessing/base.py)) if
       you want those off `.npz` too — they're independent of the dataset seam

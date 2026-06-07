@@ -1,4 +1,4 @@
-# HydraFlow: SBI Pipeline Template with BayesFlow 
+# HydraBFlow: SBI Pipeline Template with BayesFlow 
 
 ## Goal
 
@@ -26,21 +26,21 @@ Everything else — config management, output tracing, reproducibility — is fi
   a config file + a registered Python class, no changes to infrastructure code.
 - **Separation of concerns**: infrastructure code (training loop, logging, checkpointing)
   is never modified by the end user. User-facing code lives in clearly marked locations
-  (`src/hydraflow/simulators/`, plus optional custom `networks`/`preprocessing`/`augmentation`).
+  (`src/hydrabflow/simulators/`, plus optional custom `networks`/`preprocessing`/`augmentation`).
 - **Single-level inference only**: one summary network + one inference network via
   `bf.BasicWorkflow`. The reference project's hierarchical global/local split and compositional
   vs non-compositional score modeling are deliberately removed.
 - **Preprocessing vs augmentation are distinct stages**: preprocessing is deterministic,
-  whole-dataset, applied once and fitted on the train split (`src/hydraflow/preprocessing/`);
+  whole-dataset, applied once and fitted on the train split (`src/hydrabflow/preprocessing/`);
   augmentation is stochastic and per-batch, applied inside `fit_offline`
-  (`src/hydraflow/augmentation/`).
+  (`src/hydrabflow/augmentation/`).
 
 ## Tech Stack
 
 - **SBI framework**: BayesFlow 2.x (Keras 3)
-- **Compute backend**: JAX. `KERAS_BACKEND=jax` is pinned by `hydraflow.utils.backend` (imported
-  first via `hydraflow/__init__.py`) before any keras/bayesflow import. Override via env var.
-- **Packaging / env**: `uv` (`pyproject.toml`, src-layout, console scripts `hydraflow-*`).
+- **Compute backend**: JAX. `KERAS_BACKEND=jax` is pinned by `hydrabflow.utils.backend` (imported
+  first via `hydrabflow/__init__.py`) before any keras/bayesflow import. Override via env var.
+- **Packaging / env**: `uv` (`pyproject.toml`, src-layout, console scripts `hydrabflow-*`).
 - **Config management**: Hydra with structured dataclass configs (`ConfigStore`) + config groups.
 - **Neural architectures**: SetTransformer / DeepSet / TimeSeriesTransformer (summary network),
   FlowMatching / DiffusionModel (inference network) — user-swappable via config. Summary defaults
@@ -51,15 +51,15 @@ Everything else — config management, output tracing, reproducibility — is fi
 
 ## Folder Structure (finalized)
 
-HydraFlow/
-├── pyproject.toml               # uv-managed; deps + console scripts (hydraflow-*)
+HydraBFlow/
+├── pyproject.toml               # uv-managed; deps + console scripts (hydrabflow-*)
 ├── conf/                        # Hydra config groups (YAML values; schemas live in code)
 │   ├── config.yaml              # Root: defaults list, seed, model_dir, hydra.run.dir
 │   ├── simulator/               # skeleton.yaml (+ your simulators)
 │   ├── model/                   # default.yaml -> summary_network/ + inference_network/
 │   ├── training/  data/  preprocessing/  augmentation/
 │   ├── adapter/   inference/    eval/   tuning/
-├── src/hydraflow/
+├── src/hydrabflow/
 │   ├── config/schema.py         # ALL dataclass schemas + register_configs()
 │   ├── simulators/              # USER MODIFIES: base.py, registry.py, skeleton.py
 │   ├── networks/factory.py      # build_summary_network / build_inference_network
@@ -87,7 +87,7 @@ HydraFlow/
 
 ## What the User Modifies
 
-- `conf/simulator/<name>.yaml` + `src/hydraflow/simulators/<name>.py`: the forward model
+- `conf/simulator/<name>.yaml` + `src/hydrabflow/simulators/<name>.py`: the forward model
   (a `@register_simulator`-decorated `BaseSimulator` subclass).
 - `conf/adapter/default.yaml`: set `inference_variables` to the simulator's parameter names and
   `summary_variables` to its observable key(s). (`inference_variables` is mandatory — `???`.)
@@ -99,8 +99,8 @@ HydraFlow/
 ## What Is Fixed Infrastructure (do not modify)
 
 - Entry point scripts (`scripts/`) and the `pipeline.*.cli` wrappers (`pipeline/_app.py`).
-- The five run stages, adapter/workflow builders, IO, checkpointing (`src/hydraflow/pipeline/`).
-- Config schema + registration (`src/hydraflow/config/schema.py`).
+- The five run stages, adapter/workflow builders, IO, checkpointing (`src/hydrabflow/pipeline/`).
+- Config schema + registration (`src/hydrabflow/config/schema.py`).
 - Hydra output directory setup and config saving; JAX backend pin (`utils/backend.py`).
 
 ## Output Directory Convention

@@ -1,16 +1,16 @@
-# Graph Report - HydraFlow  (2026-06-07)
+# Graph Report - HydraBFlow  (2026-06-07)
 
 ## Corpus Check
-- 55 files · ~22,678 words
+- 55 files · ~22,728 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 489 nodes · 626 edges · 37 communities (29 shown, 8 thin omitted)
-- Extraction: 86% EXTRACTED · 14% INFERRED · 0% AMBIGUOUS · INFERRED: 87 edges (avg confidence: 0.72)
+- 480 nodes · 606 edges · 38 communities (30 shown, 8 thin omitted)
+- Extraction: 87% EXTRACTED · 13% INFERRED · 0% AMBIGUOUS · INFERRED: 79 edges (avg confidence: 0.71)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `79bc195c`
+- Built from commit: `6b38204c`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -44,6 +44,7 @@
 - [[_COMMUNITY_Community 34|Community 34]]
 - [[_COMMUNITY_Community 35|Community 35]]
 - [[_COMMUNITY_Community 36|Community 36]]
+- [[_COMMUNITY_Community 38|Community 38]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `PreprocessStep` - 19 edges
@@ -51,40 +52,40 @@
 3. `build_workflow()` - 11 edges
 4. `TwoMoonsSimulator` - 11 edges
 5. `What You Must Do When Invoked` - 11 edges
-6. `HydraFlow` - 11 edges
-7. `Root Hydra Config (config.yaml)` - 11 edges
-8. `run_training()` - 10 edges
-9. `SplitStep` - 10 edges
-10. `/graphify` - 10 edges
+6. `Root Hydra Config (config.yaml)` - 11 edges
+7. `run_training()` - 10 edges
+8. `SplitStep` - 10 edges
+9. `/graphify` - 10 edges
+10. `HydraBFlow: SBI Pipeline Template with BayesFlow` - 10 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `Dataset Format Registry by Extension` --semantically_similar_to--> `Self-Registration by Name Pattern`  [INFERRED] [semantically similar]
-  docs/bring_your_own_data.md → CLAUDE.md
 - `test_augmentation_registry_builds()` --calls--> `build_augmentations()`  [INFERRED]
-  tests/test_registries.py → src/hydraflow/augmentation/registry.py
+  tests/test_registries.py → src/hydrabflow/augmentation/registry.py
 - `test_build_adapter()` --calls--> `build_adapter()`  [INFERRED]
-  tests/test_workflow.py → src/hydraflow/pipeline/adapter.py
+  tests/test_workflow.py → src/hydrabflow/pipeline/adapter.py
 - `test_build_workflow()` --calls--> `build_workflow()`  [INFERRED]
-  tests/test_workflow.py → src/hydraflow/pipeline/workflow.py
+  tests/test_workflow.py → src/hydrabflow/pipeline/workflow.py
 - `test_two_moons_shapes_and_reproducibility()` --calls--> `get_simulator()`  [INFERRED]
-  tests/test_augmentation.py → src/hydraflow/simulators/registry.py
+  tests/test_augmentation.py → src/hydrabflow/simulators/registry.py
+- `test_skeleton_simulator_raises()` --calls--> `get_simulator()`  [INFERRED]
+  tests/test_registries.py → src/hydrabflow/simulators/registry.py
 
 ## Import Cycles
 - None detected.
 
-## Communities (37 total, 8 thin omitted)
+## Communities (38 total, 8 thin omitted)
 
 ### Community 0 - "Preprocessing Pipeline & Steps"
-Cohesion: 0.06
-Nodes (32): ABC, PreprocessPipeline, PreprocessStep, Preprocessing step protocol and the pipeline that orchestrates them.  A :class:`, Element-wise (dataset-in, dataset-out) transform with optional fitted state., Estimate any state from ``data`` (train split). Stateless steps leave this empty, Return a transformed copy/view of ``data``., Arrays to persist so the fitted transform can be reloaded. Default: nothing. (+24 more)
+Cohesion: 0.08
+Nodes (28): ABC, PreprocessPipeline, PreprocessStep, Preprocessing step protocol and the pipeline that orchestrates them.  A :class:`, Element-wise (dataset-in, dataset-out) transform with optional fitted state., Estimate any state from ``data`` (train split). Stateless steps leave this empty, Return a transformed copy/view of ``data``., Arrays to persist so the fitted transform can be reloaded. Default: nothing. (+20 more)
 
 ### Community 1 - "Eval / Checkpoint Stages"
-Cohesion: 0.07
-Nodes (45): Adapter Default Config, Adapter Two Moons Config, Augmentation Default Config, Dataset Data Contract (shared leading axis), Bring Your Own Data Guide, Dataset Format Registry by Extension, Single IO Seam (load_dataset/save_dataset), Full Traceability Principle (+37 more)
+Cohesion: 0.08
+Nodes (38): Adapter Default Config, Adapter Two Moons Config, Augmentation Default Config, Dataset Data Contract (shared leading axis), Bring Your Own Data Guide, Dataset Format Registry by Extension, Single IO Seam (load_dataset/save_dataset), Root Hydra Config (config.yaml) (+30 more)
 
 ### Community 2 - "Design Principles & Configs"
-Cohesion: 0.06
-Nodes (43): fix_keras_model(), load_approximator(), Model save/load helpers, including the BayesFlow ``.keras`` deserialization work, Return a path to a load-safe copy of ``model_path`` (patching the ArrayImpl tag), Load a saved approximator, applying the ArrayImpl fix first., save_approximator(), Stage 3: evaluation on a simulated test set (with known ground truth).  Loads th, Stage 5: application to real (observed) data.  Like :mod:`evaluate`, but the inp (+35 more)
+Cohesion: 0.07
+Nodes (37): fix_keras_model(), load_approximator(), Model save/load helpers, including the BayesFlow ``.keras`` deserialization work, Return a path to a load-safe copy of ``model_path`` (patching the ArrayImpl tag), Load a saved approximator, applying the ArrayImpl fix first., save_approximator(), Stage 3: evaluation on a simulated test set (with known ground truth).  Loads th, _require_model_dir() (+29 more)
 
 ### Community 3 - "Augmentation Registry & Tests"
 Cohesion: 0.08
@@ -95,8 +96,8 @@ Cohesion: 0.06
 Nodes (41): available_augmentations(), build_augmentations(), Name -> augmentation-factory registry and builder.  An augmentation factory rece, Build the ordered augmentation list from ``cfg.augmentation`` (an ``Augmentation, available_steps(), available_simulators(), get_simulator(), Name -> simulator-class registry.  New simulators self-register with the ``@regi (+33 more)
 
 ### Community 5 - "Example Simulators (Skeleton/TwoMoons)"
-Cohesion: 0.11
-Nodes (19): build_inference_network(), build_summary_network(), Build BayesFlow networks from structured dataclass configs (no ``_target_``).  T, Return a single BayesFlow summary network for ``cfg`` (a ``SummaryNetworkConfig`, Return a BayesFlow inference (posterior) network for ``cfg`` (an ``InferenceNetw, _as_list(), build_adapter(), Build the BayesFlow ``Adapter`` from ``AdapterConfig``.  The adapter is the stru (+11 more)
+Cohesion: 0.09
+Nodes (23): build_inference_network(), build_summary_network(), Build BayesFlow networks from structured dataclass configs (no ``_target_``).  T, Return a single BayesFlow summary network for ``cfg`` (a ``SummaryNetworkConfig`, Return a BayesFlow inference (posterior) network for ``cfg`` (an ``InferenceNetw, _as_list(), build_adapter(), Build the BayesFlow ``Adapter`` from ``AdapterConfig``.  The adapter is the stru (+15 more)
 
 ### Community 6 - "Config Schemas"
 Cohesion: 0.11
@@ -152,25 +153,29 @@ Nodes (12): 0. What you're running, 1. Prerequisites, 2.1 Generate the training 
 
 ### Community 34 - "Community 34"
 Cohesion: 0.17
-Nodes (11): Core Design Principles, Decisions Log, Folder Structure (finalized), Goal, graphify, HydraFlow: SBI Pipeline Template with BayesFlow, Output Directory Convention, Run stages (5 entry points) (+3 more)
+Nodes (11): Core Design Principles, Decisions Log, Folder Structure (finalized), Goal, graphify, HydraBFlow: SBI Pipeline Template with BayesFlow, Output Directory Convention, Run stages (5 entry points) (+3 more)
 
 ### Community 35 - "Community 35"
 Cohesion: 0.18
 Nodes (10): 1. Prerequisites, 2. Run a study, 3. What gets saved, 4. Run many processes at once (parallel tuning), 5. Reading the results, 6. Changing what is tuned (the search space), 7. Key config reference (`tuning` group), 8. Command recap (+2 more)
 
+### Community 38 - "Community 38"
+Cohesion: 0.24
+Nodes (4): Per-feature z-score standardization step.  Generalizes the reference project's `, Standardizer, Dataset, ndarray
+
 ## Knowledge Gaps
-- **113 isolated node(s):** `PreToolUse`, `ModelConfig`, `DataConfig`, `TrainingConfig`, `InferenceConfig` (+108 more)
+- **116 isolated node(s):** `PreToolUse`, `ModelConfig`, `DataConfig`, `TrainingConfig`, `InferenceConfig` (+111 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **8 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `build_pipeline()` connect `Example Augmentations` to `Preprocessing Pipeline & Steps`, `Design Principles & Configs`?**
-  _High betweenness centrality (0.130) - this node is a cross-community bridge._
+- **Why does `build_pipeline()` connect `Example Augmentations` to `Preprocessing Pipeline & Steps`, `Design Principles & Configs`, `Example Simulators (Skeleton/TwoMoons)`?**
+  _High betweenness centrality (0.134) - this node is a cross-community bridge._
 - **Why does `run_training()` connect `Design Principles & Configs` to `Example Augmentations`, `Simulate Stage & Registries`, `Example Simulators (Skeleton/TwoMoons)`?**
-  _High betweenness centrality (0.123) - this node is a cross-community bridge._
-- **Why does `build_augmentations()` connect `Simulate Stage & Registries` to `Design Principles & Configs`?**
+  _High betweenness centrality (0.126) - this node is a cross-community bridge._
+- **Why does `PreprocessPipeline` connect `Preprocessing Pipeline & Steps` to `Example Augmentations`?**
   _High betweenness centrality (0.114) - this node is a cross-community bridge._
 - **Are the 9 inferred relationships involving `PreprocessStep` (e.g. with `Standardizer` and `CastDtype`) actually correct?**
   _`PreprocessStep` has 9 INFERRED edges - model-reasoned connections that need verification._
@@ -178,5 +183,5 @@ _Questions this graph is uniquely positioned to answer:_
   _`Dataset` has 8 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 8 inferred relationships involving `build_workflow()` (e.g. with `run_real_evaluation()` and `run_evaluation()`) actually correct?**
   _`build_workflow()` has 8 INFERRED edges - model-reasoned connections that need verification._
-- **What connects `PreToolUse`, `Marimo notebook: inspect a training run's posterior samples and diagnostics.  Ru`, `HydraFlow: a reusable BayesFlow + Hydra SBI pipeline template.  Importing the pa` to the rest of the system?**
-  _216 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `PreToolUse`, `Marimo notebook: inspect a training run's posterior samples and diagnostics.  Ru`, `HydraBFlow: a reusable BayesFlow + Hydra SBI pipeline template.  Importing the pa` to the rest of the system?**
+  _219 weakly-connected nodes found - possible documentation gaps or missing edges._

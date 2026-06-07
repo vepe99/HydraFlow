@@ -4,7 +4,7 @@
 defaults:
   - base_tuning
 
-study_name: hydraflow_study
+study_name: hydrabflow_study
 storage_dir: ${data.data_dir}/tuning
 n_trials: 50
 directions: [minimize, minimize]

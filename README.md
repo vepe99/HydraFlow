@@ -1,4 +1,4 @@
-# HydraFlow
+# HydraBFlow
 
 A reusable, cookiecutter-style template for **Simulation-Based Inference (SBI)** pipelines built
 on [BayesFlow](https://bayesflow.org) + [Hydra](https://hydra.cc). The template owns all the
@@ -6,7 +6,7 @@ infrastructure — dataset generation, training, evaluation, real-data applicati
 tuning, preprocessing, checkpointing, and full config traceability. To start a new project you
 only:
 
-1. **Write your simulator** (forward model) in `src/hydraflow/simulators/`.
+1. **Write your simulator** (forward model) in `src/hydrabflow/simulators/`.
 2. **Pick & configure SBI components** (summary network, inference network, training, etc.) by
    editing YAML under `conf/`.
 
@@ -30,17 +30,17 @@ Everything else is fixed infrastructure you should not need to touch.
   `model`, `training`, `data`, `preprocessing`, `augmentation`, `adapter`, `inference`, `eval`,
   `tuning`) has a typed dataclass schema registered in Hydra's `ConfigStore`. Networks and
   simulators are built by **factory functions** that read these dataclasses (no `_target_`).
-- **JAX backend + GPU pin.** Before keras/bayesflow/JAX are imported, `hydraflow.utils.backend`
+- **JAX backend + GPU pin.** Before keras/bayesflow/JAX are imported, `hydrabflow.utils.backend`
   pins `KERAS_BACKEND=jax` and uses [`autocvd`](https://pypi.org/project/autocvd) to limit the
-  visible GPUs (picking available/free ones). Defaults to one GPU; override with `HYDRAFLOW_NUM_GPUS`
+  visible GPUs (picking available/free ones). Defaults to one GPU; override with `HYDRABFLOW_NUM_GPUS`
   (`0` = CPU-only), or set `CUDA_VISIBLE_DEVICES` yourself to take full control (autocvd is then
   skipped). Falls back gracefully when there are no NVIDIA GPUs.
 - **Preprocessing vs augmentation split.**
   - *Preprocessing* = deterministic, whole-dataset transforms applied **once** (NaN cleaning,
     train/val split, z-score standardization). Fitted on train, saved to the run dir, reused at
-    inference. Lives in `src/hydraflow/preprocessing/`.
+    inference. Lives in `src/hydrabflow/preprocessing/`.
   - *Augmentation* = stochastic, per-batch transforms applied **inside** `fit_offline`. Lives in
-    `src/hydraflow/augmentation/`.
+    `src/hydrabflow/augmentation/`.
 - **Full traceability.** Every run writes its resolved Hydra config (`.hydra/`), checkpoints,
   metrics, and (for inference) posterior samples into
   `outputs/<simulator>/<model>/<timestamp>/`.
@@ -49,28 +49,28 @@ Everything else is fixed infrastructure you should not need to touch.
 
 ```bash
 uv sync                      # create .venv and install everything
-uv run hydraflow-simulate    # generate a dataset (skeleton sim raises NotImplementedError)
-uv run hydraflow-train       # train the approximator
-uv run hydraflow-evaluate    # diagnostics on a simulated test set
-uv run hydraflow-tune        # Optuna hyperparameter search
-uv run hydraflow-evaluate-real  # apply the trained model to real data
+uv run hydrabflow-simulate    # generate a dataset (skeleton sim raises NotImplementedError)
+uv run hydrabflow-train       # train the approximator
+uv run hydrabflow-evaluate    # diagnostics on a simulated test set
+uv run hydrabflow-tune        # Optuna hyperparameter search
+uv run hydrabflow-evaluate-real  # apply the trained model to real data
 ```
 
 Equivalently, the Hydra apps under `scripts/` can be run directly, e.g.
 `uv run python scripts/train.py training.n_epochs=5 data.n_simulations=2000`.
 
 The shipped simulator (`conf/simulator/skeleton.yaml` →
-`hydraflow.simulators.skeleton.SkeletonSimulator`) is an intentional stub: running the pipeline
+`hydrabflow.simulators.skeleton.SkeletonSimulator`) is an intentional stub: running the pipeline
 raises a clear `NotImplementedError` telling you where to plug in your forward model. Replace it
 with your own `BaseSimulator` subclass and a matching `conf/simulator/<name>.yaml`.
 
 ## Adding your own simulator
 
-1. Create `src/hydraflow/simulators/my_sim.py`:
+1. Create `src/hydrabflow/simulators/my_sim.py`:
 
    ```python
-   from hydraflow.simulators.base import BaseSimulator
-   from hydraflow.simulators.registry import register_simulator
+   from hydrabflow.simulators.base import BaseSimulator
+   from hydrabflow.simulators.registry import register_simulator
 
    @register_simulator("my_sim")
    class MySimulator(BaseSimulator):

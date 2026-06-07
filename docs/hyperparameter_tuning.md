@@ -1,6 +1,6 @@
 # Hyperparameter tuning
 
-HydraFlow's `tune` stage runs an [Optuna](https://optuna.org) study over a config-driven search
+HydraBFlow's `tune` stage runs an [Optuna](https://optuna.org) study over a config-driven search
 space. By default it is **multi-objective**, minimizing both posterior **RMSE** and **calibration
 error** on the validation split, and it **saves every trial** — the trained model, posterior
 samples, and all evaluation plots — so any trial can be inspected or reused later, not just the
@@ -47,12 +47,12 @@ uv run python scripts/tune.py \
   tuning.n_trials=50 tuning.n_epochs=10
 ```
 
-What happens, in order ([`pipeline/tune.py`](../src/hydraflow/pipeline/tune.py)):
+What happens, in order ([`pipeline/tune.py`](../src/hydrabflow/pipeline/tune.py)):
 
 1. Load `training_data_10000.npz`, fit the preprocessing pipeline **once**, split into
    `train` / `val`. The fitted state is written to
-   `data/two_moons/tuning/hydraflow_study/preprocessing_state.npz` (shared by all trials).
-2. Open/create the study in `data/two_moons/tuning/hydraflow_study.log` (`load_if_exists=True`).
+   `data/two_moons/tuning/hydrabflow_study/preprocessing_state.npz` (shared by all trials).
+2. Open/create the study in `data/two_moons/tuning/hydrabflow_study.log` (`load_if_exists=True`).
 3. For each of `n_trials`: sample hyperparameters from the search space, apply them onto a config
    copy, build a fresh workflow, train for the short `n_epochs` budget, sample the posterior on
    `val`, and score `RMSE` + `calibration_error`.
@@ -63,7 +63,7 @@ What happens, in order ([`pipeline/tune.py`](../src/hydraflow/pipeline/tune.py))
 > `training.n_epochs` — tuning compares architectures cheaply. After you pick a winner, retrain it
 > fully with `scripts/train.py` for the real model.
 
-The console entry point `uv run hydraflow-tune` is equivalent (same Hydra app).
+The console entry point `uv run hydrabflow-tune` is equivalent (same Hydra app).
 
 ---
 
@@ -71,8 +71,8 @@ The console entry point `uv run hydraflow-tune` is equivalent (same Hydra app).
 
 ```
 data/two_moons/tuning/                         #  = ${data.data_dir}/tuning  = ${tuning.storage_dir}
-├── hydraflow_study.log                        # Optuna JournalStorage (concurrency-safe)
-└── hydraflow_study/                            #  = ${tuning.artifacts_dir}
+├── hydrabflow_study.log                        # Optuna JournalStorage (concurrency-safe)
+└── hydrabflow_study/                            #  = ${tuning.artifacts_dir}
     ├── preprocessing_state.npz                 # fit once, SHARED across every trial/model
     ├── best_trials.json                        # best / Pareto trials (+ their artifact dirs)
     └── trials/
@@ -93,7 +93,7 @@ one `trials/` directory without ever colliding. The per-process Hydra run dir
 (`outputs/two_moons/default/<timestamp>/`) also receives a copy of `best_trials.json` for full
 traceability of that specific invocation.
 
-The diagnostics are the **same truth-aware diagnostics the [evaluate](../src/hydraflow/pipeline/evaluate.py)
+The diagnostics are the **same truth-aware diagnostics the [evaluate](../src/hydrabflow/pipeline/evaluate.py)
 stage produces** — the validation split carries ground-truth parameters, so RMSE, calibration
 ECDF, recovery, and z-score contraction are all meaningful per trial. Which plots are produced is
 controlled by `eval.diagnostics`.
@@ -125,10 +125,10 @@ uv run python scripts/tune.py simulator=two_moons adapter=two_moons \
   data.n_simulations=10000 tuning.n_trials=25 &
 ```
 
-Together they complete ~50 trials of `hydraflow_study`, all writing into the same `trials/`
+Together they complete ~50 trials of `hydrabflow_study`, all writing into the same `trials/`
 directory keyed by trial number. Each process trains on its own GPU — the
 [`autocvd` GPU pin](../README.md#design-at-a-glance) gives each worker a different free GPU
-automatically (`HYDRAFLOW_NUM_GPUS=1` per process, the default).
+automatically (`HYDRABFLOW_NUM_GPUS=1` per process, the default).
 
 > **SLURM tip.** Submit an array job where every task runs the identical `tune.py` command with the
 > same `study_name`/`storage_dir` on a shared filesystem. `n_trials` is *per task*; total trials =
@@ -147,7 +147,7 @@ path to each trial's saved artifacts:
     "number": 17,
     "values": [0.42, 0.031],
     "params": {"model.summary_network.summary_dim": 48, "training.learning_rate": 0.0021, ...},
-    "artifact_dir": "data/two_moons/tuning/hydraflow_study/trials/trial_0017"
+    "artifact_dir": "data/two_moons/tuning/hydrabflow_study/trials/trial_0017"
   }
 ]
 ```
@@ -161,8 +161,8 @@ import optuna
 from optuna.storages import JournalStorage
 from optuna.storages.journal import JournalFileBackend
 
-storage = JournalStorage(JournalFileBackend("data/two_moons/tuning/hydraflow_study.log"))
-study = optuna.load_study(study_name="hydraflow_study", storage=storage)
+storage = JournalStorage(JournalFileBackend("data/two_moons/tuning/hydrabflow_study.log"))
+study = optuna.load_study(study_name="hydrabflow_study", storage=storage)
 for t in study.best_trials:           # Pareto front (multi-objective)
     print(t.number, t.values, t.params)
 ```
@@ -205,7 +205,7 @@ search_space:
     choices: [flow_matching, diffusion]
 ```
 
-Spec keys, by `type` ([`_suggest`](../src/hydraflow/pipeline/tune.py)):
+Spec keys, by `type` ([`_suggest`](../src/hydrabflow/pipeline/tune.py)):
 
 | `type`        | required        | optional            | maps to                       |
 |---------------|-----------------|---------------------|-------------------------------|
@@ -233,7 +233,7 @@ uv run python scripts/tune.py ... tuning.directions=[minimize]
 With one direction the objective returns RMSE alone and `best_trials.json` holds the single best
 trial; with two it returns `(rmse, calibration_error)` and holds the Pareto front. (To change
 *which* metrics are optimized, edit the `bf_metrics` calls in
-[`_objective`](../src/hydraflow/pipeline/tune.py).)
+[`_objective`](../src/hydrabflow/pipeline/tune.py).)
 
 ---
 
@@ -241,7 +241,7 @@ trial; with two it returns `(rmse, calibration_error)` and holds the Pareto fron
 
 | Field | Default | Meaning |
 |-------|---------|---------|
-| `study_name` | `hydraflow_study` | Optuna study name; also the artifacts subdir and `.log` name. |
+| `study_name` | `hydrabflow_study` | Optuna study name; also the artifacts subdir and `.log` name. |
 | `storage_dir` | `${data.data_dir}/tuning` | Where the `<study_name>.log` study file lives. |
 | `n_trials` | `50` | Trials to run **this process** (total = sum over concurrent processes). |
 | `n_epochs` | `10` | Short per-trial training budget. |
@@ -264,7 +264,7 @@ uv run python scripts/simulate.py simulator=two_moons adapter=two_moons data.n_s
 uv run python scripts/tune.py simulator=two_moons adapter=two_moons \
   data.n_simulations=10000 tuning.n_trials=50 tuning.n_epochs=10
 
-# 3. inspect data/two_moons/tuning/hydraflow_study/best_trials.json, then retrain the winner fully
+# 3. inspect data/two_moons/tuning/hydrabflow_study/best_trials.json, then retrain the winner fully
 uv run python scripts/train.py simulator=two_moons adapter=two_moons \
   data.n_simulations=10000 training.n_epochs=100 <best params as overrides>
 ```

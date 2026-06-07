@@ -1,7 +1,7 @@
 #!/usr/bin/env python
-"""Entry point: dataset generation. Thin wrapper over hydraflow.pipeline.simulate."""
+"""Entry point: dataset generation. Thin wrapper over hydrabflow.pipeline.simulate."""
 
-from hydraflow.pipeline.simulate import cli
+from hydrabflow.pipeline.simulate import cli
 
 if __name__ == "__main__":
     cli()

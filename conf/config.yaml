@@ -1,5 +1,5 @@
 # Root Hydra config. Composes one choice from every config group, layered on top of the
-# `base_config` structured schema (registered in hydraflow.config.schema). `_self_` is last so
+# `base_config` structured schema (registered in hydrabflow.config.schema). `_self_` is last so
 # values set here win over group defaults.
 defaults:
   - base_config
