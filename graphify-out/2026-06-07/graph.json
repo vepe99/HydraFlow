@@ -4,760 +4,76 @@
   "graph": {},
   "nodes": [
     {
-      "label": "CLAUDE.md",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
+      "label": "settings.json",
+      "file_type": "code",
+      "source_file": ".claude/settings.json",
       "source_location": "L1",
-      "id": "claude",
-      "community": 34,
-      "norm_label": "claude.md"
+      "id": "claude_settings",
+      "community": 16,
+      "norm_label": "settings.json"
     },
     {
-      "label": "HydraBFlow: SBI Pipeline Template with BayesFlow",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L1",
-      "id": "claude_hydrabflow_sbi_pipeline_template_with_bayesflow",
-      "community": 34,
-      "norm_label": "hydrabflow: sbi pipeline template with bayesflow"
+      "label": "hooks",
+      "file_type": "code",
+      "source_file": ".claude/settings.json",
+      "source_location": "L2",
+      "id": "claude_settings_hooks",
+      "community": 16,
+      "norm_label": "hooks"
     },
     {
-      "label": "Goal",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
+      "label": "PreToolUse",
+      "file_type": "code",
+      "source_file": ".claude/settings.json",
       "source_location": "L3",
-      "id": "claude_goal",
-      "community": 34,
-      "norm_label": "goal"
+      "id": "claude_settings_hooks_pretooluse",
+      "community": 16,
+      "norm_label": "pretooluse"
     },
     {
-      "label": "Core Design Principles",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
+      "label": "settings.local.json",
+      "file_type": "code",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L1",
+      "id": "claude_settings_local",
+      "community": 45,
+      "norm_label": "settings.local.json"
+    },
+    {
+      "label": "permissions",
+      "file_type": "code",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L2",
+      "id": "claude_settings_local_permissions",
+      "community": 45,
+      "norm_label": "permissions"
+    },
+    {
+      "label": "allow",
+      "file_type": "code",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L3",
+      "id": "claude_settings_local_permissions_allow",
+      "community": 45,
+      "norm_label": "allow"
+    },
+    {
+      "label": "_()",
+      "file_type": "code",
+      "source_file": "notebooks/explore.py",
       "source_location": "L14",
-      "id": "claude_core_design_principles",
-      "community": 34,
-      "norm_label": "core design principles"
+      "id": "notebooks_explore",
+      "community": 19,
+      "norm_label": "_()"
     },
     {
-      "label": "Tech Stack",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L38",
-      "id": "claude_tech_stack",
-      "community": 34,
-      "norm_label": "tech stack"
-    },
-    {
-      "label": "Folder Structure (finalized)",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L52",
-      "id": "claude_folder_structure_finalized",
-      "community": 34,
-      "norm_label": "folder structure (finalized)"
-    },
-    {
-      "label": "Run stages (5 entry points)",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L78",
-      "id": "claude_run_stages_5_entry_points",
-      "community": 34,
-      "norm_label": "run stages (5 entry points)"
-    },
-    {
-      "label": "What the User Modifies",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L88",
-      "id": "claude_what_the_user_modifies",
-      "community": 34,
-      "norm_label": "what the user modifies"
-    },
-    {
-      "label": "What Is Fixed Infrastructure (do not modify)",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L99",
-      "id": "claude_what_is_fixed_infrastructure_do_not_modify",
-      "community": 34,
-      "norm_label": "what is fixed infrastructure (do not modify)"
-    },
-    {
-      "label": "Output Directory Convention",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L106",
-      "id": "claude_output_directory_convention",
-      "community": 34,
-      "norm_label": "output directory convention"
-    },
-    {
-      "label": "Decisions Log",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L125",
-      "id": "claude_decisions_log",
-      "community": 34,
-      "norm_label": "decisions log"
-    },
-    {
-      "label": "graphify",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L140",
-      "id": "claude_graphify",
-      "community": 34,
-      "norm_label": "graphify"
-    },
-    {
-      "label": "README.md",
-      "file_type": "document",
-      "source_file": "README.md",
+      "label": "Marimo notebook: inspect a training run's posterior samples and diagnostics.  Ru",
+      "file_type": "rationale",
+      "source_file": "notebooks/explore.py",
       "source_location": "L1",
-      "id": "readme",
-      "community": 40,
-      "norm_label": "readme.md"
-    },
-    {
-      "label": "HydraBFlow",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L1",
-      "id": "readme_hydrabflow",
-      "community": 40,
-      "norm_label": "hydrabflow"
-    },
-    {
-      "label": "Design at a glance",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L24",
-      "id": "readme_design_at_a_glance",
-      "community": 40,
-      "norm_label": "design at a glance"
-    },
-    {
-      "label": "Quickstart",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L48",
-      "id": "readme_quickstart",
-      "community": 40,
-      "norm_label": "quickstart"
-    },
-    {
-      "label": "Adding your own simulator",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L67",
-      "id": "readme_adding_your_own_simulator",
-      "community": 40,
-      "norm_label": "adding your own simulator"
-    },
-    {
-      "label": "bring_your_own_data.md",
-      "file_type": "document",
-      "source_file": "docs/bring_your_own_data.md",
-      "source_location": "L1",
-      "id": "docs_bring_your_own_data",
-      "community": 32,
-      "norm_label": "bring_your_own_data.md"
-    },
-    {
-      "label": "Bring your own data (no simulator) & supporting other file formats",
-      "file_type": "document",
-      "source_file": "docs/bring_your_own_data.md",
-      "source_location": "L1",
-      "id": "docs_bring_your_own_data_bring_your_own_data_no_simulator_supporting_other_file_formats",
-      "community": 32,
-      "norm_label": "bring your own data (no simulator) & supporting other file formats"
-    },
-    {
-      "label": "Part A \u2014 Use a pre-existing dataset (no simulator)",
-      "file_type": "document",
-      "source_file": "docs/bring_your_own_data.md",
-      "source_location": "L18",
-      "id": "docs_bring_your_own_data_part_a_use_a_pre_existing_dataset_no_simulator",
-      "community": 32,
-      "norm_label": "part a \u2014 use a pre-existing dataset (no simulator)"
-    },
-    {
-      "label": "A.1 The data contract",
-      "file_type": "document",
-      "source_file": "docs/bring_your_own_data.md",
-      "source_location": "L20",
-      "id": "docs_bring_your_own_data_a_1_the_data_contract",
-      "community": 32,
-      "norm_label": "a.1 the data contract"
-    },
-    {
-      "label": "A.2 Convert your existing arrays into the dataset file",
-      "file_type": "document",
-      "source_file": "docs/bring_your_own_data.md",
-      "source_location": "L40",
-      "id": "docs_bring_your_own_data_a_2_convert_your_existing_arrays_into_the_dataset_file",
-      "community": 32,
-      "norm_label": "a.2 convert your existing arrays into the dataset file"
-    },
-    {
-      "label": "A.3 Tell the pipeline about it (config only)",
-      "file_type": "document",
-      "source_file": "docs/bring_your_own_data.md",
-      "source_location": "L61",
-      "id": "docs_bring_your_own_data_a_3_tell_the_pipeline_about_it_config_only",
-      "community": 32,
-      "norm_label": "a.3 tell the pipeline about it (config only)"
-    },
-    {
-      "label": "A.4 Run train + evaluate",
-      "file_type": "document",
-      "source_file": "docs/bring_your_own_data.md",
-      "source_location": "L93",
-      "id": "docs_bring_your_own_data_a_4_run_train_evaluate",
-      "community": 32,
-      "norm_label": "a.4 run train + evaluate"
-    },
-    {
-      "label": "A.5 What reads what",
-      "file_type": "document",
-      "source_file": "docs/bring_your_own_data.md",
-      "source_location": "L132",
-      "id": "docs_bring_your_own_data_a_5_what_reads_what",
-      "community": 32,
-      "norm_label": "a.5 what reads what"
-    },
-    {
-      "label": "Part B \u2014 Support a file format other than `.npz`",
-      "file_type": "document",
-      "source_file": "docs/bring_your_own_data.md",
-      "source_location": "L147",
-      "id": "docs_bring_your_own_data_part_b_support_a_file_format_other_than_npz",
-      "community": 32,
-      "norm_label": "part b \u2014 support a file format other than `.npz`"
-    },
-    {
-      "label": "B.1 The single seam",
-      "file_type": "document",
-      "source_file": "docs/bring_your_own_data.md",
-      "source_location": "L149",
-      "id": "docs_bring_your_own_data_b_1_the_single_seam",
-      "community": 32,
-      "norm_label": "b.1 the single seam"
-    },
-    {
-      "label": "B.2 Option 1 \u2014 Quick swap (one format, replace the body)",
-      "file_type": "document",
-      "source_file": "docs/bring_your_own_data.md",
-      "source_location": "L177",
-      "id": "docs_bring_your_own_data_b_2_option_1_quick_swap_one_format_replace_the_body",
-      "community": 32,
-      "norm_label": "b.2 option 1 \u2014 quick swap (one format, replace the body)"
-    },
-    {
-      "label": "B.3 Option 2 \u2014 A format registry (support several formats by extension)",
-      "file_type": "document",
-      "source_file": "docs/bring_your_own_data.md",
-      "source_location": "L212",
-      "id": "docs_bring_your_own_data_b_3_option_2_a_format_registry_support_several_formats_by_extension",
-      "community": 32,
-      "norm_label": "b.3 option 2 \u2014 a format registry (support several formats by extension)"
-    },
-    {
-      "label": "B.4 (Optional) validate keys/shapes on load",
-      "file_type": "document",
-      "source_file": "docs/bring_your_own_data.md",
-      "source_location": "L319",
-      "id": "docs_bring_your_own_data_b_4_optional_validate_keys_shapes_on_load",
-      "community": 32,
-      "norm_label": "b.4 (optional) validate keys/shapes on load"
-    },
-    {
-      "label": "Checklist",
-      "file_type": "document",
-      "source_file": "docs/bring_your_own_data.md",
-      "source_location": "L338",
-      "id": "docs_bring_your_own_data_checklist",
-      "community": 32,
-      "norm_label": "checklist"
-    },
-    {
-      "label": "end_to_end_guide.md",
-      "file_type": "document",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L1",
-      "id": "docs_end_to_end_guide",
-      "community": 7,
-      "norm_label": "end_to_end_guide.md"
-    },
-    {
-      "label": "HydraBFlow \u2014 End-to-End Pipeline Guide",
-      "file_type": "document",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L1",
-      "id": "docs_end_to_end_guide_hydrabflow_end_to_end_pipeline_guide",
-      "community": 7,
-      "norm_label": "hydrabflow \u2014 end-to-end pipeline guide"
-    },
-    {
-      "label": "0. Prerequisites & install",
-      "file_type": "document",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L24",
-      "id": "docs_end_to_end_guide_0_prerequisites_install",
-      "community": 7,
-      "norm_label": "0. prerequisites & install"
-    },
-    {
-      "label": "1. The five stages at a glance",
-      "file_type": "document",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L51",
-      "id": "docs_end_to_end_guide_1_the_five_stages_at_a_glance",
-      "community": 7,
-      "norm_label": "1. the five stages at a glance"
-    },
-    {
-      "label": "2. Changing the simulator",
-      "file_type": "document",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L79",
-      "id": "docs_end_to_end_guide_2_changing_the_simulator",
-      "community": 7,
-      "norm_label": "2. changing the simulator"
-    },
-    {
-      "label": "2a. Write the simulator class",
-      "file_type": "document",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L86",
-      "id": "docs_end_to_end_guide_2a_write_the_simulator_class",
-      "community": 7,
-      "norm_label": "2a. write the simulator class"
-    },
-    {
-      "label": "2b. Make it self-register",
-      "file_type": "document",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L144",
-      "id": "docs_end_to_end_guide_2b_make_it_self_register",
-      "community": 7,
-      "norm_label": "2b. make it self-register"
-    },
-    {
-      "label": "2c. Add the simulator config",
-      "file_type": "document",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L157",
-      "id": "docs_end_to_end_guide_2c_add_the_simulator_config",
-      "community": 7,
-      "norm_label": "2c. add the simulator config"
-    },
-    {
-      "label": "2d. Wire the adapter to your parameter / observable names",
-      "file_type": "document",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L177",
-      "id": "docs_end_to_end_guide_2d_wire_the_adapter_to_your_parameter_observable_names",
-      "community": 7,
-      "norm_label": "2d. wire the adapter to your parameter / observable names"
-    },
-    {
-      "label": "2e. Shape contract cheat-sheet",
-      "file_type": "document",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L196",
-      "id": "docs_end_to_end_guide_2e_shape_contract_cheat_sheet",
-      "community": 7,
-      "norm_label": "2e. shape contract cheat-sheet"
-    },
-    {
-      "label": "2f. Generate the dataset",
-      "file_type": "document",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L206",
-      "id": "docs_end_to_end_guide_2f_generate_the_dataset",
-      "community": 7,
-      "norm_label": "2f. generate the dataset"
-    },
-    {
-      "label": "3. Using `conf/`",
-      "file_type": "document",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L218",
-      "id": "docs_end_to_end_guide_3_using_conf",
-      "community": 7,
-      "norm_label": "3. using `conf/`"
-    },
-    {
-      "label": "Three ways to set a value",
-      "file_type": "document",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L248",
-      "id": "docs_end_to_end_guide_three_ways_to_set_a_value",
-      "community": 7,
-      "norm_label": "three ways to set a value"
-    },
-    {
-      "label": "Run the rest of the pipeline",
-      "file_type": "document",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L268",
-      "id": "docs_end_to_end_guide_run_the_rest_of_the_pipeline",
-      "community": 7,
-      "norm_label": "run the rest of the pipeline"
-    },
-    {
-      "label": "4. Adding a SummaryNetwork that isn't shipped",
-      "file_type": "document",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L293",
-      "id": "docs_end_to_end_guide_4_adding_a_summarynetwork_that_isn_t_shipped",
-      "community": 7,
-      "norm_label": "4. adding a summarynetwork that isn't shipped"
-    },
-    {
-      "label": "Step 1 \u2014 add a branch to the factory",
-      "file_type": "document",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L301",
-      "id": "docs_end_to_end_guide_step_1_add_a_branch_to_the_factory",
-      "community": 7,
-      "norm_label": "step 1 \u2014 add a branch to the factory"
-    },
-    {
-      "label": "Step 2 \u2014 (only if you need new hyperparameters) extend the schema",
-      "file_type": "document",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L329",
-      "id": "docs_end_to_end_guide_step_2_only_if_you_need_new_hyperparameters_extend_the_schema",
-      "community": 7,
-      "norm_label": "step 2 \u2014 (only if you need new hyperparameters) extend the schema"
-    },
-    {
-      "label": "Step 3 \u2014 add a selectable config file",
-      "file_type": "document",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L351",
-      "id": "docs_end_to_end_guide_step_3_add_a_selectable_config_file",
-      "community": 7,
-      "norm_label": "step 3 \u2014 add a selectable config file"
-    },
-    {
-      "label": "Use it",
-      "file_type": "document",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L367",
-      "id": "docs_end_to_end_guide_use_it",
-      "community": 7,
-      "norm_label": "use it"
-    },
-    {
-      "label": "5. Adding an InferenceNetwork that isn't shipped",
-      "file_type": "document",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L375",
-      "id": "docs_end_to_end_guide_5_adding_an_inferencenetwork_that_isn_t_shipped",
-      "community": 7,
-      "norm_label": "5. adding an inferencenetwork that isn't shipped"
-    },
-    {
-      "label": "Step 1 \u2014 branch in the factory",
-      "file_type": "document",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L380",
-      "id": "docs_end_to_end_guide_step_1_branch_in_the_factory",
-      "community": 7,
-      "norm_label": "step 1 \u2014 branch in the factory"
-    },
-    {
-      "label": "Step 2 \u2014 extend `InferenceNetworkConfig` if needed",
-      "file_type": "document",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L402",
-      "id": "docs_end_to_end_guide_step_2_extend_inferencenetworkconfig_if_needed",
-      "community": 7,
-      "norm_label": "step 2 \u2014 extend `inferencenetworkconfig` if needed"
-    },
-    {
-      "label": "Step 3 \u2014 selectable config",
-      "file_type": "document",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L407",
-      "id": "docs_end_to_end_guide_step_3_selectable_config",
-      "community": 7,
-      "norm_label": "step 3 \u2014 selectable config"
-    },
-    {
-      "label": "Use it",
-      "file_type": "document",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L422",
-      "id": "docs_end_to_end_guide_use_it_422",
-      "community": 7,
-      "norm_label": "use it"
-    },
-    {
-      "label": "6. Hyperparameter tuning",
-      "file_type": "document",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L430",
-      "id": "docs_end_to_end_guide_6_hyperparameter_tuning",
-      "community": 7,
-      "norm_label": "6. hyperparameter tuning"
-    },
-    {
-      "label": "7. Changing the values studied",
-      "file_type": "document",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L473",
-      "id": "docs_end_to_end_guide_7_changing_the_values_studied",
-      "community": 7,
-      "norm_label": "7. changing the values studied"
-    },
-    {
-      "label": "Spec reference (consumed by `_suggest` in `tune.py`)",
-      "file_type": "document",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L502",
-      "id": "docs_end_to_end_guide_spec_reference_consumed_by_suggest_in_tune_py",
-      "community": 7,
-      "norm_label": "spec reference (consumed by `_suggest` in `tune.py`)"
-    },
-    {
-      "label": "Common edits",
-      "file_type": "document",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L518",
-      "id": "docs_end_to_end_guide_common_edits",
-      "community": 7,
-      "norm_label": "common edits"
-    },
-    {
-      "label": "8. End-to-end recap (Gaussian example)",
-      "file_type": "document",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L535",
-      "id": "docs_end_to_end_guide_8_end_to_end_recap_gaussian_example",
-      "community": 7,
-      "norm_label": "8. end-to-end recap (gaussian example)"
-    },
-    {
-      "label": "hyperparameter_tuning.md",
-      "file_type": "document",
-      "source_file": "docs/hyperparameter_tuning.md",
-      "source_location": "L1",
-      "id": "docs_hyperparameter_tuning",
-      "community": 35,
-      "norm_label": "hyperparameter_tuning.md"
-    },
-    {
-      "label": "Hyperparameter tuning",
-      "file_type": "document",
-      "source_file": "docs/hyperparameter_tuning.md",
-      "source_location": "L1",
-      "id": "docs_hyperparameter_tuning_hyperparameter_tuning",
-      "community": 35,
-      "norm_label": "hyperparameter tuning"
-    },
-    {
-      "label": "1. Prerequisites",
-      "file_type": "document",
-      "source_file": "docs/hyperparameter_tuning.md",
-      "source_location": "L26",
-      "id": "docs_hyperparameter_tuning_1_prerequisites",
-      "community": 35,
-      "norm_label": "1. prerequisites"
-    },
-    {
-      "label": "2. Run a study",
-      "file_type": "document",
-      "source_file": "docs/hyperparameter_tuning.md",
-      "source_location": "L41",
-      "id": "docs_hyperparameter_tuning_2_run_a_study",
-      "community": 35,
-      "norm_label": "2. run a study"
-    },
-    {
-      "label": "3. What gets saved",
-      "file_type": "document",
-      "source_file": "docs/hyperparameter_tuning.md",
-      "source_location": "L70",
-      "id": "docs_hyperparameter_tuning_3_what_gets_saved",
-      "community": 35,
-      "norm_label": "3. what gets saved"
-    },
-    {
-      "label": "4. Run many processes at once (parallel tuning)",
-      "file_type": "document",
-      "source_file": "docs/hyperparameter_tuning.md",
-      "source_location": "L112",
-      "id": "docs_hyperparameter_tuning_4_run_many_processes_at_once_parallel_tuning",
-      "community": 35,
-      "norm_label": "4. run many processes at once (parallel tuning)"
-    },
-    {
-      "label": "5. Reading the results",
-      "file_type": "document",
-      "source_file": "docs/hyperparameter_tuning.md",
-      "source_location": "L139",
-      "id": "docs_hyperparameter_tuning_5_reading_the_results",
-      "community": 35,
-      "norm_label": "5. reading the results"
-    },
-    {
-      "label": "6. Changing what is tuned (the search space)",
-      "file_type": "document",
-      "source_file": "docs/hyperparameter_tuning.md",
-      "source_location": "L181",
-      "id": "docs_hyperparameter_tuning_6_changing_what_is_tuned_the_search_space",
-      "community": 35,
-      "norm_label": "6. changing what is tuned (the search space)"
-    },
-    {
-      "label": "Single-objective instead of RMSE + calibration",
-      "file_type": "document",
-      "source_file": "docs/hyperparameter_tuning.md",
-      "source_location": "L224",
-      "id": "docs_hyperparameter_tuning_single_objective_instead_of_rmse_calibration",
-      "community": 35,
-      "norm_label": "single-objective instead of rmse + calibration"
-    },
-    {
-      "label": "7. Key config reference (`tuning` group)",
-      "file_type": "document",
-      "source_file": "docs/hyperparameter_tuning.md",
-      "source_location": "L240",
-      "id": "docs_hyperparameter_tuning_7_key_config_reference_tuning_group",
-      "community": 35,
-      "norm_label": "7. key config reference (`tuning` group)"
-    },
-    {
-      "label": "8. Command recap",
-      "file_type": "document",
-      "source_file": "docs/hyperparameter_tuning.md",
-      "source_location": "L255",
-      "id": "docs_hyperparameter_tuning_8_command_recap",
-      "community": 35,
-      "norm_label": "8. command recap"
-    },
-    {
-      "label": "two_moons_pipeline.md",
-      "file_type": "document",
-      "source_file": "docs/two_moons_pipeline.md",
-      "source_location": "L1",
-      "id": "docs_two_moons_pipeline",
-      "community": 33,
-      "norm_label": "two_moons_pipeline.md"
-    },
-    {
-      "label": "Running a full pipeline with the Two Moons simulator",
-      "file_type": "document",
-      "source_file": "docs/two_moons_pipeline.md",
-      "source_location": "L1",
-      "id": "docs_two_moons_pipeline_running_a_full_pipeline_with_the_two_moons_simulator",
-      "community": 33,
-      "norm_label": "running a full pipeline with the two moons simulator"
-    },
-    {
-      "label": "0. What you're running",
-      "file_type": "document",
-      "source_file": "docs/two_moons_pipeline.md",
-      "source_location": "L13",
-      "id": "docs_two_moons_pipeline_0_what_you_re_running",
-      "community": 33,
-      "norm_label": "0. what you're running"
-    },
-    {
-      "label": "1. Prerequisites",
-      "file_type": "document",
-      "source_file": "docs/two_moons_pipeline.md",
-      "source_location": "L35",
-      "id": "docs_two_moons_pipeline_1_prerequisites",
-      "community": 33,
-      "norm_label": "1. prerequisites"
-    },
-    {
-      "label": "2. The four commands (full run)",
-      "file_type": "document",
-      "source_file": "docs/two_moons_pipeline.md",
-      "source_location": "L46",
-      "id": "docs_two_moons_pipeline_2_the_four_commands_full_run",
-      "community": 33,
-      "norm_label": "2. the four commands (full run)"
-    },
-    {
-      "label": "2.1 Generate the training set",
-      "file_type": "document",
-      "source_file": "docs/two_moons_pipeline.md",
-      "source_location": "L56",
-      "id": "docs_two_moons_pipeline_2_1_generate_the_training_set",
-      "community": 33,
-      "norm_label": "2.1 generate the training set"
-    },
-    {
-      "label": "2.2 Generate a held-out test set",
-      "file_type": "document",
-      "source_file": "docs/two_moons_pipeline.md",
-      "source_location": "L66",
-      "id": "docs_two_moons_pipeline_2_2_generate_a_held_out_test_set",
-      "community": 33,
-      "norm_label": "2.2 generate a held-out test set"
-    },
-    {
-      "label": "2.3 Train",
-      "file_type": "document",
-      "source_file": "docs/two_moons_pipeline.md",
-      "source_location": "L81",
-      "id": "docs_two_moons_pipeline_2_3_train",
-      "community": 33,
-      "norm_label": "2.3 train"
-    },
-    {
-      "label": "2.4 Evaluate",
-      "file_type": "document",
-      "source_file": "docs/two_moons_pipeline.md",
-      "source_location": "L108",
-      "id": "docs_two_moons_pipeline_2_4_evaluate",
-      "community": 33,
-      "norm_label": "2.4 evaluate"
-    },
-    {
-      "label": "3. Fast smoke run (\u22481 minute)",
-      "file_type": "document",
-      "source_file": "docs/two_moons_pipeline.md",
-      "source_location": "L135",
-      "id": "docs_two_moons_pipeline_3_fast_smoke_run_1_minute",
-      "community": 33,
-      "norm_label": "3. fast smoke run (\u22481 minute)"
-    },
-    {
-      "label": "4. Optional: train with observational noise (augmentations)",
-      "file_type": "document",
-      "source_file": "docs/two_moons_pipeline.md",
-      "source_location": "L162",
-      "id": "docs_two_moons_pipeline_4_optional_train_with_observational_noise_augmentations",
-      "community": 33,
-      "norm_label": "4. optional: train with observational noise (augmentations)"
-    },
-    {
-      "label": "5. Tuning the prior / observation knobs (optional)",
-      "file_type": "document",
-      "source_file": "docs/two_moons_pipeline.md",
-      "source_location": "L183",
-      "id": "docs_two_moons_pipeline_5_tuning_the_prior_observation_knobs_optional",
-      "community": 33,
-      "norm_label": "5. tuning the prior / observation knobs (optional)"
-    },
-    {
-      "label": "6. Command recap",
-      "file_type": "document",
-      "source_file": "docs/two_moons_pipeline.md",
-      "source_location": "L201",
-      "id": "docs_two_moons_pipeline_6_command_recap",
-      "community": 33,
-      "norm_label": "6. command recap"
+      "id": "notebooks_explore_rationale_1",
+      "community": 19,
+      "norm_label": "marimo notebook: inspect a training run's posterior samples and diagnostics.  ru"
     },
     {
       "label": "evaluate.py",
@@ -1890,7 +1206,7 @@
       "source_file": "",
       "source_location": "",
       "id": "abc",
-      "community": 0,
+      "community": 9,
       "norm_label": "abc"
     },
     {
@@ -2124,7 +1440,7 @@
       "source_file": "src/hydrabflow/preprocessing/registry.py",
       "source_location": "L1",
       "id": "preprocessing_registry",
-      "community": 11,
+      "community": 39,
       "norm_label": "registry.py"
     },
     {
@@ -2133,7 +1449,7 @@
       "source_file": "src/hydrabflow/preprocessing/registry.py",
       "source_location": "L13",
       "id": "preprocessing_registry_register_step",
-      "community": 11,
+      "community": 39,
       "norm_label": "register_step()"
     },
     {
@@ -2142,7 +1458,7 @@
       "source_file": "src/hydrabflow/preprocessing/registry.py",
       "source_location": "L25",
       "id": "preprocessing_registry_build_pipeline",
-      "community": 11,
+      "community": 39,
       "norm_label": "build_pipeline()"
     },
     {
@@ -2169,7 +1485,7 @@
       "source_file": "src/hydrabflow/preprocessing/registry.py",
       "source_location": "L1",
       "id": "preprocessing_registry_rationale_1",
-      "community": 11,
+      "community": 39,
       "norm_label": "name -> preprocessing-step registry and pipeline builder."
     },
     {
@@ -2178,7 +1494,7 @@
       "source_file": "src/hydrabflow/preprocessing/registry.py",
       "source_location": "L14",
       "id": "preprocessing_registry_rationale_14",
-      "community": 11,
+      "community": 39,
       "norm_label": "register a step factory (usually the step class itself) under ``name``."
     },
     {
@@ -2187,7 +1503,7 @@
       "source_file": "src/hydrabflow/preprocessing/registry.py",
       "source_location": "L26",
       "id": "preprocessing_registry_rationale_26",
-      "community": 11,
+      "community": 39,
       "norm_label": "build a :class:`preprocesspipeline` from ``cfg.preprocessing`` (a ``preprocessin"
     },
     {
@@ -2196,7 +1512,7 @@
       "source_file": "src/hydrabflow/preprocessing/standardize.py",
       "source_location": "L1",
       "id": "preprocessing_standardize",
-      "community": 39,
+      "community": 0,
       "norm_label": "standardize.py"
     },
     {
@@ -2205,7 +1521,7 @@
       "source_file": "src/hydrabflow/preprocessing/standardize.py",
       "source_location": "L21",
       "id": "preprocessing_standardize_standardizer",
-      "community": 39,
+      "community": 0,
       "norm_label": "standardizer"
     },
     {
@@ -2214,7 +1530,7 @@
       "source_file": "src/hydrabflow/preprocessing/standardize.py",
       "source_location": "L24",
       "id": "preprocessing_standardize_standardizer_init",
-      "community": 39,
+      "community": 0,
       "norm_label": ".__init__()"
     },
     {
@@ -2223,7 +1539,7 @@
       "source_file": "src/hydrabflow/preprocessing/standardize.py",
       "source_location": "L29",
       "id": "preprocessing_standardize_standardizer_fit",
-      "community": 39,
+      "community": 0,
       "norm_label": ".fit()"
     },
     {
@@ -2232,7 +1548,7 @@
       "source_file": "src/hydrabflow/preprocessing/standardize.py",
       "source_location": "L29",
       "id": "src_hydrabflow_preprocessing_standardize_py_dataset",
-      "community": 39,
+      "community": 0,
       "norm_label": "dataset"
     },
     {
@@ -2241,7 +1557,7 @@
       "source_file": "src/hydrabflow/preprocessing/standardize.py",
       "source_location": "L36",
       "id": "preprocessing_standardize_standardizer_transform",
-      "community": 39,
+      "community": 0,
       "norm_label": ".transform()"
     },
     {
@@ -2250,7 +1566,7 @@
       "source_file": "src/hydrabflow/preprocessing/standardize.py",
       "source_location": "L44",
       "id": "preprocessing_standardize_standardizer_inverse_transform",
-      "community": 39,
+      "community": 0,
       "norm_label": ".inverse_transform()"
     },
     {
@@ -2259,7 +1575,7 @@
       "source_file": "src/hydrabflow/preprocessing/standardize.py",
       "source_location": "L50",
       "id": "preprocessing_standardize_standardizer_state",
-      "community": 39,
+      "community": 0,
       "norm_label": ".state()"
     },
     {
@@ -2268,7 +1584,7 @@
       "source_file": "src/hydrabflow/preprocessing/standardize.py",
       "source_location": "L50",
       "id": "src_hydrabflow_preprocessing_standardize_py_ndarray",
-      "community": 39,
+      "community": 0,
       "norm_label": "ndarray"
     },
     {
@@ -2277,7 +1593,7 @@
       "source_file": "src/hydrabflow/preprocessing/standardize.py",
       "source_location": "L57",
       "id": "preprocessing_standardize_standardizer_load_state",
-      "community": 39,
+      "community": 0,
       "norm_label": ".load_state()"
     },
     {
@@ -2286,7 +1602,7 @@
       "source_file": "src/hydrabflow/preprocessing/standardize.py",
       "source_location": "L1",
       "id": "preprocessing_standardize_rationale_1",
-      "community": 39,
+      "community": 0,
       "norm_label": "per-feature z-score standardization step.  generalizes the reference project's `"
     },
     {
@@ -3379,12 +2695,66 @@
       "norm_label": "a step's random stream is its own spawn child, so it doesn't depend on trailing"
     },
     {
+      "label": "test_config.py",
+      "file_type": "code",
+      "source_file": "tests/test_config.py",
+      "source_location": "L1",
+      "id": "tests_test_config",
+      "community": 10,
+      "norm_label": "test_config.py"
+    },
+    {
+      "label": "test_root_config_composes()",
+      "file_type": "code",
+      "source_file": "tests/test_config.py",
+      "source_location": "L8",
+      "id": "tests_test_config_test_root_config_composes",
+      "community": 10,
+      "norm_label": "test_root_config_composes()"
+    },
+    {
+      "label": "test_interpolations_resolve()",
+      "file_type": "code",
+      "source_file": "tests/test_config.py",
+      "source_location": "L16",
+      "id": "tests_test_config_test_interpolations_resolve",
+      "community": 10,
+      "norm_label": "test_interpolations_resolve()"
+    },
+    {
+      "label": "test_inference_variables_set()",
+      "file_type": "code",
+      "source_file": "tests/test_config.py",
+      "source_location": "L25",
+      "id": "tests_test_config_test_inference_variables_set",
+      "community": 10,
+      "norm_label": "test_inference_variables_set()"
+    },
+    {
+      "label": "test_group_override()",
+      "file_type": "code",
+      "source_file": "tests/test_config.py",
+      "source_location": "L29",
+      "id": "tests_test_config_test_group_override",
+      "community": 10,
+      "norm_label": "test_group_override()"
+    },
+    {
+      "label": "Config composition + schema validation smoke tests.",
+      "file_type": "rationale",
+      "source_file": "tests/test_config.py",
+      "source_location": "L1",
+      "id": "tests_test_config_rationale_1",
+      "community": 10,
+      "norm_label": "config composition + schema validation smoke tests."
+    },
+    {
       "label": "test_preprocessing.py",
       "file_type": "code",
       "source_file": "tests/test_preprocessing.py",
       "source_location": "L1",
       "id": "tests_test_preprocessing",
-      "community": 11,
+      "community": 39,
       "norm_label": "test_preprocessing.py"
     },
     {
@@ -3393,7 +2763,7 @@
       "source_file": "tests/test_preprocessing.py",
       "source_location": "L10",
       "id": "tests_test_preprocessing_toy_data",
-      "community": 11,
+      "community": 39,
       "norm_label": "_toy_data()"
     },
     {
@@ -3402,7 +2772,7 @@
       "source_file": "tests/test_preprocessing.py",
       "source_location": "L22",
       "id": "tests_test_preprocessing_test_pipeline_fit_transform_and_split",
-      "community": 11,
+      "community": 39,
       "norm_label": "test_pipeline_fit_transform_and_split()"
     },
     {
@@ -3411,7 +2781,7 @@
       "source_file": "tests/test_preprocessing.py",
       "source_location": "L35",
       "id": "tests_test_preprocessing_test_state_roundtrip",
-      "community": 11,
+      "community": 39,
       "norm_label": "test_state_roundtrip()"
     },
     {
@@ -3420,7 +2790,7 @@
       "source_file": "tests/test_preprocessing.py",
       "source_location": "L1",
       "id": "tests_test_preprocessing_rationale_1",
-      "community": 11,
+      "community": 39,
       "norm_label": "preprocessing pipeline: fit/transform/split + state save/load round-trip."
     },
     {
@@ -3532,337 +2902,994 @@
       "norm_label": "adapter / network / workflow construction. skipped if bayesflow isn't installed."
     },
     {
-      "label": "settings.json",
-      "file_type": "code",
-      "source_file": ".claude/settings.json",
-      "source_location": "L1",
-      "community": 16,
-      "norm_label": "settings.json",
-      "id": "claude_settings"
-    },
-    {
-      "label": "hooks",
-      "file_type": "code",
-      "source_file": ".claude/settings.json",
-      "source_location": "L2",
-      "community": 16,
-      "norm_label": "hooks",
-      "id": "claude_settings_hooks"
-    },
-    {
-      "label": "PreToolUse",
-      "file_type": "code",
-      "source_file": ".claude/settings.json",
-      "source_location": "L3",
-      "community": 16,
-      "norm_label": "pretooluse",
-      "id": "claude_settings_hooks_pretooluse"
-    },
-    {
-      "label": "_()",
-      "file_type": "code",
-      "source_file": "notebooks/explore.py",
-      "source_location": "L14",
-      "community": 19,
-      "norm_label": "_()",
-      "id": "notebooks_explore"
-    },
-    {
-      "label": "Marimo notebook: inspect a training run's posterior samples and diagnostics.  Ru",
-      "file_type": "rationale",
-      "source_file": "notebooks/explore.py",
-      "source_location": "L1",
-      "community": 19,
-      "norm_label": "marimo notebook: inspect a training run's posterior samples and diagnostics.  ru",
-      "id": "notebooks_explore_rationale_1"
-    },
-    {
-      "label": "test_config.py",
-      "file_type": "code",
-      "source_file": "tests/test_config.py",
-      "source_location": "L1",
-      "community": 10,
-      "norm_label": "test_config.py",
-      "id": "tests_test_config"
-    },
-    {
-      "label": "test_root_config_composes()",
-      "file_type": "code",
-      "source_file": "tests/test_config.py",
-      "source_location": "L8",
-      "community": 10,
-      "norm_label": "test_root_config_composes()",
-      "id": "tests_test_config_test_root_config_composes"
-    },
-    {
-      "label": "test_interpolations_resolve()",
-      "file_type": "code",
-      "source_file": "tests/test_config.py",
-      "source_location": "L16",
-      "community": 10,
-      "norm_label": "test_interpolations_resolve()",
-      "id": "tests_test_config_test_interpolations_resolve"
-    },
-    {
-      "label": "test_inference_variables_set()",
-      "file_type": "code",
-      "source_file": "tests/test_config.py",
-      "source_location": "L25",
-      "community": 10,
-      "norm_label": "test_inference_variables_set()",
-      "id": "tests_test_config_test_inference_variables_set"
-    },
-    {
-      "label": "test_group_override()",
-      "file_type": "code",
-      "source_file": "tests/test_config.py",
-      "source_location": "L29",
-      "community": 10,
-      "norm_label": "test_group_override()",
-      "id": "tests_test_config_test_group_override"
-    },
-    {
-      "label": "Config composition + schema validation smoke tests.",
-      "file_type": "rationale",
-      "source_file": "tests/test_config.py",
-      "source_location": "L1",
-      "community": 10,
-      "norm_label": "config composition + schema validation smoke tests.",
-      "id": "tests_test_config_rationale_1"
-    },
-    {
       "label": "CLAUDE.md",
       "file_type": "document",
       "source_file": ".claude/CLAUDE.md",
       "source_location": "L1",
+      "id": "claude_claude",
       "community": 36,
-      "norm_label": "claude.md",
-      "id": "claude_claude"
+      "norm_label": "claude.md"
     },
     {
       "label": "graphify",
       "file_type": "document",
       "source_file": ".claude/CLAUDE.md",
       "source_location": "L1",
+      "id": "claude_claude_graphify",
       "community": 36,
-      "norm_label": "graphify",
-      "id": "claude_claude_graphify"
+      "norm_label": "graphify"
     },
     {
       "label": "SKILL.md",
       "file_type": "document",
       "source_file": ".claude/skills/graphify/SKILL.md",
       "source_location": "L1",
+      "id": "graphify_skill",
       "community": 8,
-      "norm_label": "skill.md",
-      "id": "graphify_skill"
+      "norm_label": "skill.md"
     },
     {
       "label": "/graphify",
       "file_type": "document",
       "source_file": ".claude/skills/graphify/SKILL.md",
       "source_location": "L7",
+      "id": "graphify_skill_graphify",
       "community": 31,
-      "norm_label": "/graphify",
-      "id": "graphify_skill_graphify"
+      "norm_label": "/graphify"
     },
     {
       "label": "Usage",
       "file_type": "document",
       "source_file": ".claude/skills/graphify/SKILL.md",
       "source_location": "L11",
+      "id": "graphify_skill_usage",
       "community": 31,
-      "norm_label": "usage",
-      "id": "graphify_skill_usage"
+      "norm_label": "usage"
     },
     {
       "label": "What graphify is for",
       "file_type": "document",
       "source_file": ".claude/skills/graphify/SKILL.md",
       "source_location": "L44",
+      "id": "graphify_skill_what_graphify_is_for",
       "community": 31,
-      "norm_label": "what graphify is for",
-      "id": "graphify_skill_what_graphify_is_for"
+      "norm_label": "what graphify is for"
     },
     {
       "label": "What You Must Do When Invoked",
       "file_type": "document",
       "source_file": ".claude/skills/graphify/SKILL.md",
       "source_location": "L48",
+      "id": "graphify_skill_what_you_must_do_when_invoked",
       "community": 31,
-      "norm_label": "what you must do when invoked",
-      "id": "graphify_skill_what_you_must_do_when_invoked"
+      "norm_label": "what you must do when invoked"
     },
     {
       "label": "Step 0 - GitHub repos and multi-path merge (only if a URL or several paths)",
       "file_type": "document",
       "source_file": ".claude/skills/graphify/SKILL.md",
       "source_location": "L60",
+      "id": "graphify_skill_step_0_github_repos_and_multi_path_merge_only_if_a_url_or_several_paths",
       "community": 31,
-      "norm_label": "step 0 - github repos and multi-path merge (only if a url or several paths)",
-      "id": "graphify_skill_step_0_github_repos_and_multi_path_merge_only_if_a_url_or_several_paths"
+      "norm_label": "step 0 - github repos and multi-path merge (only if a url or several paths)"
     },
     {
       "label": "Step 1 - Ensure graphify is installed",
       "file_type": "document",
       "source_file": ".claude/skills/graphify/SKILL.md",
       "source_location": "L64",
+      "id": "graphify_skill_step_1_ensure_graphify_is_installed",
       "community": 31,
-      "norm_label": "step 1 - ensure graphify is installed",
-      "id": "graphify_skill_step_1_ensure_graphify_is_installed"
+      "norm_label": "step 1 - ensure graphify is installed"
     },
     {
       "label": "Step 2 - Detect files",
       "file_type": "document",
       "source_file": ".claude/skills/graphify/SKILL.md",
       "source_location": "L106",
+      "id": "graphify_skill_step_2_detect_files",
       "community": 31,
-      "norm_label": "step 2 - detect files",
-      "id": "graphify_skill_step_2_detect_files"
+      "norm_label": "step 2 - detect files"
     },
     {
       "label": "Step 2.5 - Video and audio (only if video files detected)",
       "file_type": "document",
       "source_file": ".claude/skills/graphify/SKILL.md",
       "source_location": "L143",
+      "id": "graphify_skill_step_2_5_video_and_audio_only_if_video_files_detected",
       "community": 31,
-      "norm_label": "step 2.5 - video and audio (only if video files detected)",
-      "id": "graphify_skill_step_2_5_video_and_audio_only_if_video_files_detected"
+      "norm_label": "step 2.5 - video and audio (only if video files detected)"
     },
     {
       "label": "Step 3 - Extract entities and relationships",
       "file_type": "document",
       "source_file": ".claude/skills/graphify/SKILL.md",
       "source_location": "L147",
+      "id": "graphify_skill_step_3_extract_entities_and_relationships",
       "community": 31,
-      "norm_label": "step 3 - extract entities and relationships",
-      "id": "graphify_skill_step_3_extract_entities_and_relationships"
+      "norm_label": "step 3 - extract entities and relationships"
     },
     {
       "label": "Part A - Structural extraction for code files",
       "file_type": "document",
       "source_file": ".claude/skills/graphify/SKILL.md",
       "source_location": "L164",
+      "id": "graphify_skill_part_a_structural_extraction_for_code_files",
       "community": 31,
-      "norm_label": "part a - structural extraction for code files",
-      "id": "graphify_skill_part_a_structural_extraction_for_code_files"
+      "norm_label": "part a - structural extraction for code files"
     },
     {
       "label": "Part B - Semantic extraction (parallel subagents)",
       "file_type": "document",
       "source_file": ".claude/skills/graphify/SKILL.md",
       "source_location": "L190",
+      "id": "graphify_skill_part_b_semantic_extraction_parallel_subagents",
       "community": 31,
-      "norm_label": "part b - semantic extraction (parallel subagents)",
-      "id": "graphify_skill_part_b_semantic_extraction_parallel_subagents"
+      "norm_label": "part b - semantic extraction (parallel subagents)"
     },
     {
       "label": "Part C - Merge AST + semantic into final extraction",
       "file_type": "document",
       "source_file": ".claude/skills/graphify/SKILL.md",
       "source_location": "L335",
+      "id": "graphify_skill_part_c_merge_ast_semantic_into_final_extraction",
       "community": 31,
-      "norm_label": "part c - merge ast + semantic into final extraction",
-      "id": "graphify_skill_part_c_merge_ast_semantic_into_final_extraction"
+      "norm_label": "part c - merge ast + semantic into final extraction"
     },
     {
       "label": "Step 4 - Build graph, cluster, analyze, generate outputs",
       "file_type": "document",
       "source_file": ".claude/skills/graphify/SKILL.md",
       "source_location": "L369",
+      "id": "graphify_skill_step_4_build_graph_cluster_analyze_generate_outputs",
       "community": 31,
-      "norm_label": "step 4 - build graph, cluster, analyze, generate outputs",
-      "id": "graphify_skill_step_4_build_graph_cluster_analyze_generate_outputs"
+      "norm_label": "step 4 - build graph, cluster, analyze, generate outputs"
     },
     {
       "label": "Step 5 - Label communities",
       "file_type": "document",
       "source_file": ".claude/skills/graphify/SKILL.md",
       "source_location": "L421",
+      "id": "graphify_skill_step_5_label_communities",
       "community": 31,
-      "norm_label": "step 5 - label communities",
-      "id": "graphify_skill_step_5_label_communities"
+      "norm_label": "step 5 - label communities"
     },
     {
       "label": "Step 6 - Generate Obsidian vault (opt-in) + HTML",
       "file_type": "document",
       "source_file": ".claude/skills/graphify/SKILL.md",
       "source_location": "L461",
+      "id": "graphify_skill_step_6_generate_obsidian_vault_opt_in_html",
       "community": 31,
-      "norm_label": "step 6 - generate obsidian vault (opt-in) + html",
-      "id": "graphify_skill_step_6_generate_obsidian_vault_opt_in_html"
+      "norm_label": "step 6 - generate obsidian vault (opt-in) + html"
     },
     {
       "label": "Steps 6b-8 - Wiki, Neo4j, SVG, GraphML, MCP, benchmark (only on their flags)",
       "file_type": "document",
       "source_file": ".claude/skills/graphify/SKILL.md",
       "source_location": "L481",
+      "id": "graphify_skill_steps_6b_8_wiki_neo4j_svg_graphml_mcp_benchmark_only_on_their_flags",
       "community": 31,
-      "norm_label": "steps 6b-8 - wiki, neo4j, svg, graphml, mcp, benchmark (only on their flags)",
-      "id": "graphify_skill_steps_6b_8_wiki_neo4j_svg_graphml_mcp_benchmark_only_on_their_flags"
+      "norm_label": "steps 6b-8 - wiki, neo4j, svg, graphml, mcp, benchmark (only on their flags)"
     },
     {
       "label": "Step 9 - Save manifest, update cost tracker, clean up, and report",
       "file_type": "document",
       "source_file": ".claude/skills/graphify/SKILL.md",
       "source_location": "L487",
+      "id": "graphify_skill_step_9_save_manifest_update_cost_tracker_clean_up_and_report",
       "community": 31,
-      "norm_label": "step 9 - save manifest, update cost tracker, clean up, and report",
-      "id": "graphify_skill_step_9_save_manifest_update_cost_tracker_clean_up_and_report"
+      "norm_label": "step 9 - save manifest, update cost tracker, clean up, and report"
     },
     {
       "label": "Interpreter guard for subcommands",
       "file_type": "document",
       "source_file": ".claude/skills/graphify/SKILL.md",
       "source_location": "L561",
+      "id": "graphify_skill_interpreter_guard_for_subcommands",
       "community": 31,
-      "norm_label": "interpreter guard for subcommands",
-      "id": "graphify_skill_interpreter_guard_for_subcommands"
+      "norm_label": "interpreter guard for subcommands"
     },
     {
       "label": "For --update and --cluster-only",
       "file_type": "document",
       "source_file": ".claude/skills/graphify/SKILL.md",
       "source_location": "L579",
+      "id": "graphify_skill_for_update_and_cluster_only",
       "community": 31,
-      "norm_label": "for --update and --cluster-only",
-      "id": "graphify_skill_for_update_and_cluster_only"
+      "norm_label": "for --update and --cluster-only"
     },
     {
       "label": "For /graphify query",
       "file_type": "document",
       "source_file": ".claude/skills/graphify/SKILL.md",
       "source_location": "L585",
+      "id": "graphify_skill_for_graphify_query",
       "community": 31,
-      "norm_label": "for /graphify query",
-      "id": "graphify_skill_for_graphify_query"
+      "norm_label": "for /graphify query"
     },
     {
       "label": "For /graphify add and --watch",
       "file_type": "document",
       "source_file": ".claude/skills/graphify/SKILL.md",
       "source_location": "L597",
+      "id": "graphify_skill_for_graphify_add_and_watch",
       "community": 31,
-      "norm_label": "for /graphify add and --watch",
-      "id": "graphify_skill_for_graphify_add_and_watch"
+      "norm_label": "for /graphify add and --watch"
     },
     {
       "label": "For the commit hook and native CLAUDE.md integration",
       "file_type": "document",
       "source_file": ".claude/skills/graphify/SKILL.md",
       "source_location": "L603",
+      "id": "graphify_skill_for_the_commit_hook_and_native_claude_md_integration",
       "community": 31,
-      "norm_label": "for the commit hook and native claude.md integration",
-      "id": "graphify_skill_for_the_commit_hook_and_native_claude_md_integration"
+      "norm_label": "for the commit hook and native claude.md integration"
     },
     {
       "label": "Honesty Rules",
       "file_type": "document",
       "source_file": ".claude/skills/graphify/SKILL.md",
       "source_location": "L609",
+      "id": "graphify_skill_honesty_rules",
       "community": 31,
-      "norm_label": "honesty rules",
-      "id": "graphify_skill_honesty_rules"
+      "norm_label": "honesty rules"
+    },
+    {
+      "label": "CLAUDE.md",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L1",
+      "id": "claude",
+      "community": 34,
+      "norm_label": "claude.md"
+    },
+    {
+      "label": "HydraBFlow: SBI Pipeline Template with BayesFlow",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L1",
+      "id": "claude_hydrabflow_sbi_pipeline_template_with_bayesflow",
+      "community": 34,
+      "norm_label": "hydrabflow: sbi pipeline template with bayesflow"
+    },
+    {
+      "label": "Goal",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L3",
+      "id": "claude_goal",
+      "community": 34,
+      "norm_label": "goal"
+    },
+    {
+      "label": "Core Design Principles",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L14",
+      "id": "claude_core_design_principles",
+      "community": 34,
+      "norm_label": "core design principles"
+    },
+    {
+      "label": "Tech Stack",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L38",
+      "id": "claude_tech_stack",
+      "community": 34,
+      "norm_label": "tech stack"
+    },
+    {
+      "label": "Folder Structure (finalized)",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L52",
+      "id": "claude_folder_structure_finalized",
+      "community": 34,
+      "norm_label": "folder structure (finalized)"
+    },
+    {
+      "label": "Run stages (5 entry points)",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L78",
+      "id": "claude_run_stages_5_entry_points",
+      "community": 34,
+      "norm_label": "run stages (5 entry points)"
+    },
+    {
+      "label": "What the User Modifies",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L88",
+      "id": "claude_what_the_user_modifies",
+      "community": 34,
+      "norm_label": "what the user modifies"
+    },
+    {
+      "label": "What Is Fixed Infrastructure (do not modify)",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L99",
+      "id": "claude_what_is_fixed_infrastructure_do_not_modify",
+      "community": 34,
+      "norm_label": "what is fixed infrastructure (do not modify)"
+    },
+    {
+      "label": "Output Directory Convention",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L106",
+      "id": "claude_output_directory_convention",
+      "community": 34,
+      "norm_label": "output directory convention"
+    },
+    {
+      "label": "Decisions Log",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L125",
+      "id": "claude_decisions_log",
+      "community": 34,
+      "norm_label": "decisions log"
+    },
+    {
+      "label": "graphify",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L140",
+      "id": "claude_graphify",
+      "community": 34,
+      "norm_label": "graphify"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "id": "readme",
+      "community": 40,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "HydraBFlow",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "id": "readme_hydrabflow",
+      "community": 40,
+      "norm_label": "hydrabflow"
+    },
+    {
+      "label": "Design at a glance",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L24",
+      "id": "readme_design_at_a_glance",
+      "community": 40,
+      "norm_label": "design at a glance"
+    },
+    {
+      "label": "Quickstart",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L48",
+      "id": "readme_quickstart",
+      "community": 40,
+      "norm_label": "quickstart"
+    },
+    {
+      "label": "Adding your own simulator",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L67",
+      "id": "readme_adding_your_own_simulator",
+      "community": 40,
+      "norm_label": "adding your own simulator"
+    },
+    {
+      "label": "bring_your_own_data.md",
+      "file_type": "document",
+      "source_file": "docs/bring_your_own_data.md",
+      "source_location": "L1",
+      "id": "docs_bring_your_own_data",
+      "community": 32,
+      "norm_label": "bring_your_own_data.md"
+    },
+    {
+      "label": "Bring your own data (no simulator) & supporting other file formats",
+      "file_type": "document",
+      "source_file": "docs/bring_your_own_data.md",
+      "source_location": "L1",
+      "id": "docs_bring_your_own_data_bring_your_own_data_no_simulator_supporting_other_file_formats",
+      "community": 32,
+      "norm_label": "bring your own data (no simulator) & supporting other file formats"
+    },
+    {
+      "label": "Part A \u2014 Use a pre-existing dataset (no simulator)",
+      "file_type": "document",
+      "source_file": "docs/bring_your_own_data.md",
+      "source_location": "L18",
+      "id": "docs_bring_your_own_data_part_a_use_a_pre_existing_dataset_no_simulator",
+      "community": 32,
+      "norm_label": "part a \u2014 use a pre-existing dataset (no simulator)"
+    },
+    {
+      "label": "A.1 The data contract",
+      "file_type": "document",
+      "source_file": "docs/bring_your_own_data.md",
+      "source_location": "L20",
+      "id": "docs_bring_your_own_data_a_1_the_data_contract",
+      "community": 32,
+      "norm_label": "a.1 the data contract"
+    },
+    {
+      "label": "A.2 Convert your existing arrays into the dataset file",
+      "file_type": "document",
+      "source_file": "docs/bring_your_own_data.md",
+      "source_location": "L40",
+      "id": "docs_bring_your_own_data_a_2_convert_your_existing_arrays_into_the_dataset_file",
+      "community": 32,
+      "norm_label": "a.2 convert your existing arrays into the dataset file"
+    },
+    {
+      "label": "A.3 Tell the pipeline about it (config only)",
+      "file_type": "document",
+      "source_file": "docs/bring_your_own_data.md",
+      "source_location": "L61",
+      "id": "docs_bring_your_own_data_a_3_tell_the_pipeline_about_it_config_only",
+      "community": 32,
+      "norm_label": "a.3 tell the pipeline about it (config only)"
+    },
+    {
+      "label": "A.4 Run train + evaluate",
+      "file_type": "document",
+      "source_file": "docs/bring_your_own_data.md",
+      "source_location": "L93",
+      "id": "docs_bring_your_own_data_a_4_run_train_evaluate",
+      "community": 32,
+      "norm_label": "a.4 run train + evaluate"
+    },
+    {
+      "label": "A.5 What reads what",
+      "file_type": "document",
+      "source_file": "docs/bring_your_own_data.md",
+      "source_location": "L132",
+      "id": "docs_bring_your_own_data_a_5_what_reads_what",
+      "community": 32,
+      "norm_label": "a.5 what reads what"
+    },
+    {
+      "label": "Part B \u2014 Support a file format other than `.npz`",
+      "file_type": "document",
+      "source_file": "docs/bring_your_own_data.md",
+      "source_location": "L147",
+      "id": "docs_bring_your_own_data_part_b_support_a_file_format_other_than_npz",
+      "community": 32,
+      "norm_label": "part b \u2014 support a file format other than `.npz`"
+    },
+    {
+      "label": "B.1 The single seam",
+      "file_type": "document",
+      "source_file": "docs/bring_your_own_data.md",
+      "source_location": "L149",
+      "id": "docs_bring_your_own_data_b_1_the_single_seam",
+      "community": 32,
+      "norm_label": "b.1 the single seam"
+    },
+    {
+      "label": "B.2 Option 1 \u2014 Quick swap (one format, replace the body)",
+      "file_type": "document",
+      "source_file": "docs/bring_your_own_data.md",
+      "source_location": "L177",
+      "id": "docs_bring_your_own_data_b_2_option_1_quick_swap_one_format_replace_the_body",
+      "community": 32,
+      "norm_label": "b.2 option 1 \u2014 quick swap (one format, replace the body)"
+    },
+    {
+      "label": "B.3 Option 2 \u2014 A format registry (support several formats by extension)",
+      "file_type": "document",
+      "source_file": "docs/bring_your_own_data.md",
+      "source_location": "L212",
+      "id": "docs_bring_your_own_data_b_3_option_2_a_format_registry_support_several_formats_by_extension",
+      "community": 32,
+      "norm_label": "b.3 option 2 \u2014 a format registry (support several formats by extension)"
+    },
+    {
+      "label": "B.4 (Optional) validate keys/shapes on load",
+      "file_type": "document",
+      "source_file": "docs/bring_your_own_data.md",
+      "source_location": "L319",
+      "id": "docs_bring_your_own_data_b_4_optional_validate_keys_shapes_on_load",
+      "community": 32,
+      "norm_label": "b.4 (optional) validate keys/shapes on load"
+    },
+    {
+      "label": "Checklist",
+      "file_type": "document",
+      "source_file": "docs/bring_your_own_data.md",
+      "source_location": "L338",
+      "id": "docs_bring_your_own_data_checklist",
+      "community": 32,
+      "norm_label": "checklist"
+    },
+    {
+      "label": "end_to_end_guide.md",
+      "file_type": "document",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L1",
+      "id": "docs_end_to_end_guide",
+      "community": 7,
+      "norm_label": "end_to_end_guide.md"
+    },
+    {
+      "label": "HydraBFlow \u2014 End-to-End Pipeline Guide",
+      "file_type": "document",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L1",
+      "id": "docs_end_to_end_guide_hydrabflow_end_to_end_pipeline_guide",
+      "community": 7,
+      "norm_label": "hydrabflow \u2014 end-to-end pipeline guide"
+    },
+    {
+      "label": "0. Prerequisites & install",
+      "file_type": "document",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L24",
+      "id": "docs_end_to_end_guide_0_prerequisites_install",
+      "community": 7,
+      "norm_label": "0. prerequisites & install"
+    },
+    {
+      "label": "1. The five stages at a glance",
+      "file_type": "document",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L51",
+      "id": "docs_end_to_end_guide_1_the_five_stages_at_a_glance",
+      "community": 7,
+      "norm_label": "1. the five stages at a glance"
+    },
+    {
+      "label": "2. Changing the simulator",
+      "file_type": "document",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L79",
+      "id": "docs_end_to_end_guide_2_changing_the_simulator",
+      "community": 7,
+      "norm_label": "2. changing the simulator"
+    },
+    {
+      "label": "2a. Write the simulator class",
+      "file_type": "document",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L86",
+      "id": "docs_end_to_end_guide_2a_write_the_simulator_class",
+      "community": 7,
+      "norm_label": "2a. write the simulator class"
+    },
+    {
+      "label": "2b. Make it self-register",
+      "file_type": "document",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L144",
+      "id": "docs_end_to_end_guide_2b_make_it_self_register",
+      "community": 7,
+      "norm_label": "2b. make it self-register"
+    },
+    {
+      "label": "2c. Add the simulator config",
+      "file_type": "document",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L157",
+      "id": "docs_end_to_end_guide_2c_add_the_simulator_config",
+      "community": 7,
+      "norm_label": "2c. add the simulator config"
+    },
+    {
+      "label": "2d. Wire the adapter to your parameter / observable names",
+      "file_type": "document",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L177",
+      "id": "docs_end_to_end_guide_2d_wire_the_adapter_to_your_parameter_observable_names",
+      "community": 7,
+      "norm_label": "2d. wire the adapter to your parameter / observable names"
+    },
+    {
+      "label": "2e. Shape contract cheat-sheet",
+      "file_type": "document",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L196",
+      "id": "docs_end_to_end_guide_2e_shape_contract_cheat_sheet",
+      "community": 7,
+      "norm_label": "2e. shape contract cheat-sheet"
+    },
+    {
+      "label": "2f. Generate the dataset",
+      "file_type": "document",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L206",
+      "id": "docs_end_to_end_guide_2f_generate_the_dataset",
+      "community": 7,
+      "norm_label": "2f. generate the dataset"
+    },
+    {
+      "label": "3. Using `conf/`",
+      "file_type": "document",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L218",
+      "id": "docs_end_to_end_guide_3_using_conf",
+      "community": 7,
+      "norm_label": "3. using `conf/`"
+    },
+    {
+      "label": "Three ways to set a value",
+      "file_type": "document",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L248",
+      "id": "docs_end_to_end_guide_three_ways_to_set_a_value",
+      "community": 7,
+      "norm_label": "three ways to set a value"
+    },
+    {
+      "label": "Run the rest of the pipeline",
+      "file_type": "document",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L268",
+      "id": "docs_end_to_end_guide_run_the_rest_of_the_pipeline",
+      "community": 7,
+      "norm_label": "run the rest of the pipeline"
+    },
+    {
+      "label": "4. Adding a SummaryNetwork that isn't shipped",
+      "file_type": "document",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L293",
+      "id": "docs_end_to_end_guide_4_adding_a_summarynetwork_that_isn_t_shipped",
+      "community": 7,
+      "norm_label": "4. adding a summarynetwork that isn't shipped"
+    },
+    {
+      "label": "Step 1 \u2014 add a branch to the factory",
+      "file_type": "document",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L301",
+      "id": "docs_end_to_end_guide_step_1_add_a_branch_to_the_factory",
+      "community": 7,
+      "norm_label": "step 1 \u2014 add a branch to the factory"
+    },
+    {
+      "label": "Step 2 \u2014 (only if you need new hyperparameters) extend the schema",
+      "file_type": "document",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L329",
+      "id": "docs_end_to_end_guide_step_2_only_if_you_need_new_hyperparameters_extend_the_schema",
+      "community": 7,
+      "norm_label": "step 2 \u2014 (only if you need new hyperparameters) extend the schema"
+    },
+    {
+      "label": "Step 3 \u2014 add a selectable config file",
+      "file_type": "document",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L351",
+      "id": "docs_end_to_end_guide_step_3_add_a_selectable_config_file",
+      "community": 7,
+      "norm_label": "step 3 \u2014 add a selectable config file"
+    },
+    {
+      "label": "Use it",
+      "file_type": "document",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L367",
+      "id": "docs_end_to_end_guide_use_it",
+      "community": 7,
+      "norm_label": "use it"
+    },
+    {
+      "label": "5. Adding an InferenceNetwork that isn't shipped",
+      "file_type": "document",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L375",
+      "id": "docs_end_to_end_guide_5_adding_an_inferencenetwork_that_isn_t_shipped",
+      "community": 7,
+      "norm_label": "5. adding an inferencenetwork that isn't shipped"
+    },
+    {
+      "label": "Step 1 \u2014 branch in the factory",
+      "file_type": "document",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L380",
+      "id": "docs_end_to_end_guide_step_1_branch_in_the_factory",
+      "community": 7,
+      "norm_label": "step 1 \u2014 branch in the factory"
+    },
+    {
+      "label": "Step 2 \u2014 extend `InferenceNetworkConfig` if needed",
+      "file_type": "document",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L402",
+      "id": "docs_end_to_end_guide_step_2_extend_inferencenetworkconfig_if_needed",
+      "community": 7,
+      "norm_label": "step 2 \u2014 extend `inferencenetworkconfig` if needed"
+    },
+    {
+      "label": "Step 3 \u2014 selectable config",
+      "file_type": "document",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L407",
+      "id": "docs_end_to_end_guide_step_3_selectable_config",
+      "community": 7,
+      "norm_label": "step 3 \u2014 selectable config"
+    },
+    {
+      "label": "Use it",
+      "file_type": "document",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L422",
+      "id": "docs_end_to_end_guide_use_it_422",
+      "community": 7,
+      "norm_label": "use it"
+    },
+    {
+      "label": "6. Hyperparameter tuning",
+      "file_type": "document",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L430",
+      "id": "docs_end_to_end_guide_6_hyperparameter_tuning",
+      "community": 7,
+      "norm_label": "6. hyperparameter tuning"
+    },
+    {
+      "label": "7. Changing the values studied",
+      "file_type": "document",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L473",
+      "id": "docs_end_to_end_guide_7_changing_the_values_studied",
+      "community": 7,
+      "norm_label": "7. changing the values studied"
+    },
+    {
+      "label": "Spec reference (consumed by `_suggest` in `tune.py`)",
+      "file_type": "document",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L502",
+      "id": "docs_end_to_end_guide_spec_reference_consumed_by_suggest_in_tune_py",
+      "community": 7,
+      "norm_label": "spec reference (consumed by `_suggest` in `tune.py`)"
+    },
+    {
+      "label": "Common edits",
+      "file_type": "document",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L518",
+      "id": "docs_end_to_end_guide_common_edits",
+      "community": 7,
+      "norm_label": "common edits"
+    },
+    {
+      "label": "8. End-to-end recap (Gaussian example)",
+      "file_type": "document",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L535",
+      "id": "docs_end_to_end_guide_8_end_to_end_recap_gaussian_example",
+      "community": 7,
+      "norm_label": "8. end-to-end recap (gaussian example)"
+    },
+    {
+      "label": "hyperparameter_tuning.md",
+      "file_type": "document",
+      "source_file": "docs/hyperparameter_tuning.md",
+      "source_location": "L1",
+      "id": "docs_hyperparameter_tuning",
+      "community": 35,
+      "norm_label": "hyperparameter_tuning.md"
+    },
+    {
+      "label": "Hyperparameter tuning",
+      "file_type": "document",
+      "source_file": "docs/hyperparameter_tuning.md",
+      "source_location": "L1",
+      "id": "docs_hyperparameter_tuning_hyperparameter_tuning",
+      "community": 35,
+      "norm_label": "hyperparameter tuning"
+    },
+    {
+      "label": "1. Prerequisites",
+      "file_type": "document",
+      "source_file": "docs/hyperparameter_tuning.md",
+      "source_location": "L26",
+      "id": "docs_hyperparameter_tuning_1_prerequisites",
+      "community": 35,
+      "norm_label": "1. prerequisites"
+    },
+    {
+      "label": "2. Run a study",
+      "file_type": "document",
+      "source_file": "docs/hyperparameter_tuning.md",
+      "source_location": "L41",
+      "id": "docs_hyperparameter_tuning_2_run_a_study",
+      "community": 35,
+      "norm_label": "2. run a study"
+    },
+    {
+      "label": "3. What gets saved",
+      "file_type": "document",
+      "source_file": "docs/hyperparameter_tuning.md",
+      "source_location": "L70",
+      "id": "docs_hyperparameter_tuning_3_what_gets_saved",
+      "community": 35,
+      "norm_label": "3. what gets saved"
+    },
+    {
+      "label": "4. Run many processes at once (parallel tuning)",
+      "file_type": "document",
+      "source_file": "docs/hyperparameter_tuning.md",
+      "source_location": "L112",
+      "id": "docs_hyperparameter_tuning_4_run_many_processes_at_once_parallel_tuning",
+      "community": 35,
+      "norm_label": "4. run many processes at once (parallel tuning)"
+    },
+    {
+      "label": "5. Reading the results",
+      "file_type": "document",
+      "source_file": "docs/hyperparameter_tuning.md",
+      "source_location": "L139",
+      "id": "docs_hyperparameter_tuning_5_reading_the_results",
+      "community": 35,
+      "norm_label": "5. reading the results"
+    },
+    {
+      "label": "6. Changing what is tuned (the search space)",
+      "file_type": "document",
+      "source_file": "docs/hyperparameter_tuning.md",
+      "source_location": "L181",
+      "id": "docs_hyperparameter_tuning_6_changing_what_is_tuned_the_search_space",
+      "community": 35,
+      "norm_label": "6. changing what is tuned (the search space)"
+    },
+    {
+      "label": "Single-objective instead of RMSE + calibration",
+      "file_type": "document",
+      "source_file": "docs/hyperparameter_tuning.md",
+      "source_location": "L224",
+      "id": "docs_hyperparameter_tuning_single_objective_instead_of_rmse_calibration",
+      "community": 35,
+      "norm_label": "single-objective instead of rmse + calibration"
+    },
+    {
+      "label": "7. Key config reference (`tuning` group)",
+      "file_type": "document",
+      "source_file": "docs/hyperparameter_tuning.md",
+      "source_location": "L240",
+      "id": "docs_hyperparameter_tuning_7_key_config_reference_tuning_group",
+      "community": 35,
+      "norm_label": "7. key config reference (`tuning` group)"
+    },
+    {
+      "label": "8. Command recap",
+      "file_type": "document",
+      "source_file": "docs/hyperparameter_tuning.md",
+      "source_location": "L255",
+      "id": "docs_hyperparameter_tuning_8_command_recap",
+      "community": 35,
+      "norm_label": "8. command recap"
+    },
+    {
+      "label": "two_moons_pipeline.md",
+      "file_type": "document",
+      "source_file": "docs/two_moons_pipeline.md",
+      "source_location": "L1",
+      "id": "docs_two_moons_pipeline",
+      "community": 33,
+      "norm_label": "two_moons_pipeline.md"
+    },
+    {
+      "label": "Running a full pipeline with the Two Moons simulator",
+      "file_type": "document",
+      "source_file": "docs/two_moons_pipeline.md",
+      "source_location": "L1",
+      "id": "docs_two_moons_pipeline_running_a_full_pipeline_with_the_two_moons_simulator",
+      "community": 33,
+      "norm_label": "running a full pipeline with the two moons simulator"
+    },
+    {
+      "label": "0. What you're running",
+      "file_type": "document",
+      "source_file": "docs/two_moons_pipeline.md",
+      "source_location": "L13",
+      "id": "docs_two_moons_pipeline_0_what_you_re_running",
+      "community": 33,
+      "norm_label": "0. what you're running"
+    },
+    {
+      "label": "1. Prerequisites",
+      "file_type": "document",
+      "source_file": "docs/two_moons_pipeline.md",
+      "source_location": "L35",
+      "id": "docs_two_moons_pipeline_1_prerequisites",
+      "community": 33,
+      "norm_label": "1. prerequisites"
+    },
+    {
+      "label": "2. The four commands (full run)",
+      "file_type": "document",
+      "source_file": "docs/two_moons_pipeline.md",
+      "source_location": "L46",
+      "id": "docs_two_moons_pipeline_2_the_four_commands_full_run",
+      "community": 33,
+      "norm_label": "2. the four commands (full run)"
+    },
+    {
+      "label": "2.1 Generate the training set",
+      "file_type": "document",
+      "source_file": "docs/two_moons_pipeline.md",
+      "source_location": "L56",
+      "id": "docs_two_moons_pipeline_2_1_generate_the_training_set",
+      "community": 33,
+      "norm_label": "2.1 generate the training set"
+    },
+    {
+      "label": "2.2 Generate a held-out test set",
+      "file_type": "document",
+      "source_file": "docs/two_moons_pipeline.md",
+      "source_location": "L66",
+      "id": "docs_two_moons_pipeline_2_2_generate_a_held_out_test_set",
+      "community": 33,
+      "norm_label": "2.2 generate a held-out test set"
+    },
+    {
+      "label": "2.3 Train",
+      "file_type": "document",
+      "source_file": "docs/two_moons_pipeline.md",
+      "source_location": "L81",
+      "id": "docs_two_moons_pipeline_2_3_train",
+      "community": 33,
+      "norm_label": "2.3 train"
+    },
+    {
+      "label": "2.4 Evaluate",
+      "file_type": "document",
+      "source_file": "docs/two_moons_pipeline.md",
+      "source_location": "L108",
+      "id": "docs_two_moons_pipeline_2_4_evaluate",
+      "community": 33,
+      "norm_label": "2.4 evaluate"
+    },
+    {
+      "label": "3. Fast smoke run (\u22481 minute)",
+      "file_type": "document",
+      "source_file": "docs/two_moons_pipeline.md",
+      "source_location": "L135",
+      "id": "docs_two_moons_pipeline_3_fast_smoke_run_1_minute",
+      "community": 33,
+      "norm_label": "3. fast smoke run (\u22481 minute)"
+    },
+    {
+      "label": "4. Optional: train with observational noise (augmentations)",
+      "file_type": "document",
+      "source_file": "docs/two_moons_pipeline.md",
+      "source_location": "L162",
+      "id": "docs_two_moons_pipeline_4_optional_train_with_observational_noise_augmentations",
+      "community": 33,
+      "norm_label": "4. optional: train with observational noise (augmentations)"
+    },
+    {
+      "label": "5. Tuning the prior / observation knobs (optional)",
+      "file_type": "document",
+      "source_file": "docs/two_moons_pipeline.md",
+      "source_location": "L183",
+      "id": "docs_two_moons_pipeline_5_tuning_the_prior_observation_knobs_optional",
+      "community": 33,
+      "norm_label": "5. tuning the prior / observation knobs (optional)"
+    },
+    {
+      "label": "6. Command recap",
+      "file_type": "document",
+      "source_file": "docs/two_moons_pipeline.md",
+      "source_location": "L201",
+      "id": "docs_two_moons_pipeline_6_command_recap",
+      "community": 33,
+      "norm_label": "6. command recap"
     },
     {
       "label": "graphify Skill Trigger",
@@ -4233,782 +4260,62 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L1",
+      "source_file": ".claude/settings.json",
+      "source_location": "L2",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "claude",
-      "target": "claude_hydrabflow_sbi_pipeline_template_with_bayesflow"
+      "source": "claude_settings",
+      "target": "claude_settings_hooks"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L14",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude_hydrabflow_sbi_pipeline_template_with_bayesflow",
-      "target": "claude_core_design_principles"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L125",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude_hydrabflow_sbi_pipeline_template_with_bayesflow",
-      "target": "claude_decisions_log"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L52",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude_hydrabflow_sbi_pipeline_template_with_bayesflow",
-      "target": "claude_folder_structure_finalized"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
+      "source_file": ".claude/settings.json",
       "source_location": "L3",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "claude_hydrabflow_sbi_pipeline_template_with_bayesflow",
-      "target": "claude_goal"
+      "source": "claude_settings_hooks",
+      "target": "claude_settings_hooks_pretooluse"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L140",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L2",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude_hydrabflow_sbi_pipeline_template_with_bayesflow",
-      "target": "claude_graphify"
+      "source": "claude_settings_local",
+      "target": "claude_settings_local_permissions",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L106",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L3",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude_hydrabflow_sbi_pipeline_template_with_bayesflow",
-      "target": "claude_output_directory_convention"
+      "source": "claude_settings_local_permissions",
+      "target": "claude_settings_local_permissions_allow",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L38",
+      "source_file": "notebooks/explore.py",
+      "source_location": "L14",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude_hydrabflow_sbi_pipeline_template_with_bayesflow",
-      "target": "claude_tech_stack"
+      "source": "notebooks_explore",
+      "target": "notebooks_explore",
+      "confidence_score": 1.0
     },
     {
-      "relation": "contains",
+      "relation": "rationale_for",
       "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L99",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude_hydrabflow_sbi_pipeline_template_with_bayesflow",
-      "target": "claude_what_is_fixed_infrastructure_do_not_modify"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L88",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude_hydrabflow_sbi_pipeline_template_with_bayesflow",
-      "target": "claude_what_the_user_modifies"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L78",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude_folder_structure_finalized",
-      "target": "claude_run_stages_5_entry_points"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
+      "source_file": "notebooks/explore.py",
       "source_location": "L1",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "readme",
-      "target": "readme_hydrabflow"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L67",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_hydrabflow",
-      "target": "readme_adding_your_own_simulator"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L24",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_hydrabflow",
-      "target": "readme_design_at_a_glance"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L48",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_hydrabflow",
-      "target": "readme_quickstart"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/bring_your_own_data.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_bring_your_own_data",
-      "target": "docs_bring_your_own_data_bring_your_own_data_no_simulator_supporting_other_file_formats"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/bring_your_own_data.md",
-      "source_location": "L338",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_bring_your_own_data_bring_your_own_data_no_simulator_supporting_other_file_formats",
-      "target": "docs_bring_your_own_data_checklist"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/bring_your_own_data.md",
-      "source_location": "L18",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_bring_your_own_data_bring_your_own_data_no_simulator_supporting_other_file_formats",
-      "target": "docs_bring_your_own_data_part_a_use_a_pre_existing_dataset_no_simulator"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/bring_your_own_data.md",
-      "source_location": "L147",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_bring_your_own_data_bring_your_own_data_no_simulator_supporting_other_file_formats",
-      "target": "docs_bring_your_own_data_part_b_support_a_file_format_other_than_npz"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/bring_your_own_data.md",
-      "source_location": "L20",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_bring_your_own_data_part_a_use_a_pre_existing_dataset_no_simulator",
-      "target": "docs_bring_your_own_data_a_1_the_data_contract"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/bring_your_own_data.md",
-      "source_location": "L40",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_bring_your_own_data_part_a_use_a_pre_existing_dataset_no_simulator",
-      "target": "docs_bring_your_own_data_a_2_convert_your_existing_arrays_into_the_dataset_file"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/bring_your_own_data.md",
-      "source_location": "L61",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_bring_your_own_data_part_a_use_a_pre_existing_dataset_no_simulator",
-      "target": "docs_bring_your_own_data_a_3_tell_the_pipeline_about_it_config_only"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/bring_your_own_data.md",
-      "source_location": "L93",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_bring_your_own_data_part_a_use_a_pre_existing_dataset_no_simulator",
-      "target": "docs_bring_your_own_data_a_4_run_train_evaluate"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/bring_your_own_data.md",
-      "source_location": "L132",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_bring_your_own_data_part_a_use_a_pre_existing_dataset_no_simulator",
-      "target": "docs_bring_your_own_data_a_5_what_reads_what"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/bring_your_own_data.md",
-      "source_location": "L149",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_bring_your_own_data_part_b_support_a_file_format_other_than_npz",
-      "target": "docs_bring_your_own_data_b_1_the_single_seam"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/bring_your_own_data.md",
-      "source_location": "L177",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_bring_your_own_data_part_b_support_a_file_format_other_than_npz",
-      "target": "docs_bring_your_own_data_b_2_option_1_quick_swap_one_format_replace_the_body"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/bring_your_own_data.md",
-      "source_location": "L212",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_bring_your_own_data_part_b_support_a_file_format_other_than_npz",
-      "target": "docs_bring_your_own_data_b_3_option_2_a_format_registry_support_several_formats_by_extension"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/bring_your_own_data.md",
-      "source_location": "L319",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_bring_your_own_data_part_b_support_a_file_format_other_than_npz",
-      "target": "docs_bring_your_own_data_b_4_optional_validate_keys_shapes_on_load"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_end_to_end_guide",
-      "target": "docs_end_to_end_guide_hydrabflow_end_to_end_pipeline_guide"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L24",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_end_to_end_guide_hydrabflow_end_to_end_pipeline_guide",
-      "target": "docs_end_to_end_guide_0_prerequisites_install"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L51",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_end_to_end_guide_hydrabflow_end_to_end_pipeline_guide",
-      "target": "docs_end_to_end_guide_1_the_five_stages_at_a_glance"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L79",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_end_to_end_guide_hydrabflow_end_to_end_pipeline_guide",
-      "target": "docs_end_to_end_guide_2_changing_the_simulator"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L218",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_end_to_end_guide_hydrabflow_end_to_end_pipeline_guide",
-      "target": "docs_end_to_end_guide_3_using_conf"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L293",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_end_to_end_guide_hydrabflow_end_to_end_pipeline_guide",
-      "target": "docs_end_to_end_guide_4_adding_a_summarynetwork_that_isn_t_shipped"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L375",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_end_to_end_guide_hydrabflow_end_to_end_pipeline_guide",
-      "target": "docs_end_to_end_guide_5_adding_an_inferencenetwork_that_isn_t_shipped"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L430",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_end_to_end_guide_hydrabflow_end_to_end_pipeline_guide",
-      "target": "docs_end_to_end_guide_6_hyperparameter_tuning"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L473",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_end_to_end_guide_hydrabflow_end_to_end_pipeline_guide",
-      "target": "docs_end_to_end_guide_7_changing_the_values_studied"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L535",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_end_to_end_guide_hydrabflow_end_to_end_pipeline_guide",
-      "target": "docs_end_to_end_guide_8_end_to_end_recap_gaussian_example"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L86",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_end_to_end_guide_2_changing_the_simulator",
-      "target": "docs_end_to_end_guide_2a_write_the_simulator_class"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L144",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_end_to_end_guide_2_changing_the_simulator",
-      "target": "docs_end_to_end_guide_2b_make_it_self_register"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L157",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_end_to_end_guide_2_changing_the_simulator",
-      "target": "docs_end_to_end_guide_2c_add_the_simulator_config"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L177",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_end_to_end_guide_2_changing_the_simulator",
-      "target": "docs_end_to_end_guide_2d_wire_the_adapter_to_your_parameter_observable_names"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L196",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_end_to_end_guide_2_changing_the_simulator",
-      "target": "docs_end_to_end_guide_2e_shape_contract_cheat_sheet"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L206",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_end_to_end_guide_2_changing_the_simulator",
-      "target": "docs_end_to_end_guide_2f_generate_the_dataset"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L268",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_end_to_end_guide_3_using_conf",
-      "target": "docs_end_to_end_guide_run_the_rest_of_the_pipeline"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L248",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_end_to_end_guide_3_using_conf",
-      "target": "docs_end_to_end_guide_three_ways_to_set_a_value"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L301",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_end_to_end_guide_4_adding_a_summarynetwork_that_isn_t_shipped",
-      "target": "docs_end_to_end_guide_step_1_add_a_branch_to_the_factory"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L329",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_end_to_end_guide_4_adding_a_summarynetwork_that_isn_t_shipped",
-      "target": "docs_end_to_end_guide_step_2_only_if_you_need_new_hyperparameters_extend_the_schema"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L351",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_end_to_end_guide_4_adding_a_summarynetwork_that_isn_t_shipped",
-      "target": "docs_end_to_end_guide_step_3_add_a_selectable_config_file"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L367",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_end_to_end_guide_4_adding_a_summarynetwork_that_isn_t_shipped",
-      "target": "docs_end_to_end_guide_use_it"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L380",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_end_to_end_guide_5_adding_an_inferencenetwork_that_isn_t_shipped",
-      "target": "docs_end_to_end_guide_step_1_branch_in_the_factory"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L402",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_end_to_end_guide_5_adding_an_inferencenetwork_that_isn_t_shipped",
-      "target": "docs_end_to_end_guide_step_2_extend_inferencenetworkconfig_if_needed"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L407",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_end_to_end_guide_5_adding_an_inferencenetwork_that_isn_t_shipped",
-      "target": "docs_end_to_end_guide_step_3_selectable_config"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L422",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_end_to_end_guide_5_adding_an_inferencenetwork_that_isn_t_shipped",
-      "target": "docs_end_to_end_guide_use_it_422"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L518",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_end_to_end_guide_7_changing_the_values_studied",
-      "target": "docs_end_to_end_guide_common_edits"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/end_to_end_guide.md",
-      "source_location": "L502",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_end_to_end_guide_7_changing_the_values_studied",
-      "target": "docs_end_to_end_guide_spec_reference_consumed_by_suggest_in_tune_py"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/hyperparameter_tuning.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_hyperparameter_tuning",
-      "target": "docs_hyperparameter_tuning_hyperparameter_tuning"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/hyperparameter_tuning.md",
-      "source_location": "L26",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_hyperparameter_tuning_hyperparameter_tuning",
-      "target": "docs_hyperparameter_tuning_1_prerequisites"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/hyperparameter_tuning.md",
-      "source_location": "L41",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_hyperparameter_tuning_hyperparameter_tuning",
-      "target": "docs_hyperparameter_tuning_2_run_a_study"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/hyperparameter_tuning.md",
-      "source_location": "L70",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_hyperparameter_tuning_hyperparameter_tuning",
-      "target": "docs_hyperparameter_tuning_3_what_gets_saved"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/hyperparameter_tuning.md",
-      "source_location": "L112",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_hyperparameter_tuning_hyperparameter_tuning",
-      "target": "docs_hyperparameter_tuning_4_run_many_processes_at_once_parallel_tuning"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/hyperparameter_tuning.md",
-      "source_location": "L139",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_hyperparameter_tuning_hyperparameter_tuning",
-      "target": "docs_hyperparameter_tuning_5_reading_the_results"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/hyperparameter_tuning.md",
-      "source_location": "L181",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_hyperparameter_tuning_hyperparameter_tuning",
-      "target": "docs_hyperparameter_tuning_6_changing_what_is_tuned_the_search_space"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/hyperparameter_tuning.md",
-      "source_location": "L240",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_hyperparameter_tuning_hyperparameter_tuning",
-      "target": "docs_hyperparameter_tuning_7_key_config_reference_tuning_group"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/hyperparameter_tuning.md",
-      "source_location": "L255",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_hyperparameter_tuning_hyperparameter_tuning",
-      "target": "docs_hyperparameter_tuning_8_command_recap"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/hyperparameter_tuning.md",
-      "source_location": "L224",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_hyperparameter_tuning_6_changing_what_is_tuned_the_search_space",
-      "target": "docs_hyperparameter_tuning_single_objective_instead_of_rmse_calibration"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/two_moons_pipeline.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_two_moons_pipeline",
-      "target": "docs_two_moons_pipeline_running_a_full_pipeline_with_the_two_moons_simulator"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/two_moons_pipeline.md",
-      "source_location": "L13",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_two_moons_pipeline_running_a_full_pipeline_with_the_two_moons_simulator",
-      "target": "docs_two_moons_pipeline_0_what_you_re_running"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/two_moons_pipeline.md",
-      "source_location": "L35",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_two_moons_pipeline_running_a_full_pipeline_with_the_two_moons_simulator",
-      "target": "docs_two_moons_pipeline_1_prerequisites"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/two_moons_pipeline.md",
-      "source_location": "L46",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_two_moons_pipeline_running_a_full_pipeline_with_the_two_moons_simulator",
-      "target": "docs_two_moons_pipeline_2_the_four_commands_full_run"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/two_moons_pipeline.md",
-      "source_location": "L135",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_two_moons_pipeline_running_a_full_pipeline_with_the_two_moons_simulator",
-      "target": "docs_two_moons_pipeline_3_fast_smoke_run_1_minute"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/two_moons_pipeline.md",
-      "source_location": "L162",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_two_moons_pipeline_running_a_full_pipeline_with_the_two_moons_simulator",
-      "target": "docs_two_moons_pipeline_4_optional_train_with_observational_noise_augmentations"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/two_moons_pipeline.md",
-      "source_location": "L183",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_two_moons_pipeline_running_a_full_pipeline_with_the_two_moons_simulator",
-      "target": "docs_two_moons_pipeline_5_tuning_the_prior_observation_knobs_optional"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/two_moons_pipeline.md",
-      "source_location": "L201",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_two_moons_pipeline_running_a_full_pipeline_with_the_two_moons_simulator",
-      "target": "docs_two_moons_pipeline_6_command_recap"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/two_moons_pipeline.md",
-      "source_location": "L56",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_two_moons_pipeline_2_the_four_commands_full_run",
-      "target": "docs_two_moons_pipeline_2_1_generate_the_training_set"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/two_moons_pipeline.md",
-      "source_location": "L66",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_two_moons_pipeline_2_the_four_commands_full_run",
-      "target": "docs_two_moons_pipeline_2_2_generate_a_held_out_test_set"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/two_moons_pipeline.md",
-      "source_location": "L81",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_two_moons_pipeline_2_the_four_commands_full_run",
-      "target": "docs_two_moons_pipeline_2_3_train"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/two_moons_pipeline.md",
-      "source_location": "L108",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_two_moons_pipeline_2_the_four_commands_full_run",
-      "target": "docs_two_moons_pipeline_2_4_evaluate"
+      "source": "notebooks_explore_rationale_1",
+      "target": "notebooks_explore"
     },
     {
       "relation": "rationale_for",
@@ -9168,6 +8475,56 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "tests/test_config.py",
+      "source_location": "L29",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_config",
+      "target": "tests_test_config_test_group_override"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_config.py",
+      "source_location": "L25",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_config",
+      "target": "tests_test_config_test_inference_variables_set"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_config.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_config",
+      "target": "tests_test_config_test_interpolations_resolve"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_config.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_config",
+      "target": "tests_test_config_test_root_config_composes"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_config.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_config_rationale_1",
+      "target": "tests_test_config"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "tests/test_preprocessing.py",
       "source_location": "L22",
       "weight": 1.0,
@@ -9326,96 +8683,6 @@
       "confidence_score": 1.0,
       "source": "tests_test_workflow_rationale_1",
       "target": "tests_test_workflow"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/settings.json",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude_settings",
-      "target": "claude_settings_hooks"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/settings.json",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "claude_settings_hooks",
-      "target": "claude_settings_hooks_pretooluse"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "notebooks/explore.py",
-      "source_location": "L14",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "notebooks_explore",
-      "target": "notebooks_explore"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "notebooks/explore.py",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "notebooks_explore_rationale_1",
-      "target": "notebooks_explore"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_config.py",
-      "source_location": "L29",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tests_test_config",
-      "target": "tests_test_config_test_group_override"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_config.py",
-      "source_location": "L25",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tests_test_config",
-      "target": "tests_test_config_test_inference_variables_set"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_config.py",
-      "source_location": "L16",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tests_test_config",
-      "target": "tests_test_config_test_interpolations_resolve"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_config.py",
-      "source_location": "L8",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tests_test_config",
-      "target": "tests_test_config_test_root_config_composes"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "tests/test_config.py",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tests_test_config_rationale_1",
-      "target": "tests_test_config"
     },
     {
       "relation": "contains",
@@ -9788,6 +9055,786 @@
       "target": "graphify_skill_part_c_merge_ast_semantic_into_final_extraction"
     },
     {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude",
+      "target": "claude_hydrabflow_sbi_pipeline_template_with_bayesflow"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_hydrabflow_sbi_pipeline_template_with_bayesflow",
+      "target": "claude_core_design_principles"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L125",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_hydrabflow_sbi_pipeline_template_with_bayesflow",
+      "target": "claude_decisions_log"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L52",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_hydrabflow_sbi_pipeline_template_with_bayesflow",
+      "target": "claude_folder_structure_finalized"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_hydrabflow_sbi_pipeline_template_with_bayesflow",
+      "target": "claude_goal"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L140",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_hydrabflow_sbi_pipeline_template_with_bayesflow",
+      "target": "claude_graphify"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L106",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_hydrabflow_sbi_pipeline_template_with_bayesflow",
+      "target": "claude_output_directory_convention"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L38",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_hydrabflow_sbi_pipeline_template_with_bayesflow",
+      "target": "claude_tech_stack"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L99",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_hydrabflow_sbi_pipeline_template_with_bayesflow",
+      "target": "claude_what_is_fixed_infrastructure_do_not_modify"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L88",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_hydrabflow_sbi_pipeline_template_with_bayesflow",
+      "target": "claude_what_the_user_modifies"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L78",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_folder_structure_finalized",
+      "target": "claude_run_stages_5_entry_points"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme",
+      "target": "readme_hydrabflow"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L67",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_hydrabflow",
+      "target": "readme_adding_your_own_simulator"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L24",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_hydrabflow",
+      "target": "readme_design_at_a_glance"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L48",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_hydrabflow",
+      "target": "readme_quickstart"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/bring_your_own_data.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_bring_your_own_data",
+      "target": "docs_bring_your_own_data_bring_your_own_data_no_simulator_supporting_other_file_formats"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/bring_your_own_data.md",
+      "source_location": "L338",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_bring_your_own_data_bring_your_own_data_no_simulator_supporting_other_file_formats",
+      "target": "docs_bring_your_own_data_checklist"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/bring_your_own_data.md",
+      "source_location": "L18",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_bring_your_own_data_bring_your_own_data_no_simulator_supporting_other_file_formats",
+      "target": "docs_bring_your_own_data_part_a_use_a_pre_existing_dataset_no_simulator"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/bring_your_own_data.md",
+      "source_location": "L147",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_bring_your_own_data_bring_your_own_data_no_simulator_supporting_other_file_formats",
+      "target": "docs_bring_your_own_data_part_b_support_a_file_format_other_than_npz"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/bring_your_own_data.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_bring_your_own_data_part_a_use_a_pre_existing_dataset_no_simulator",
+      "target": "docs_bring_your_own_data_a_1_the_data_contract"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/bring_your_own_data.md",
+      "source_location": "L40",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_bring_your_own_data_part_a_use_a_pre_existing_dataset_no_simulator",
+      "target": "docs_bring_your_own_data_a_2_convert_your_existing_arrays_into_the_dataset_file"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/bring_your_own_data.md",
+      "source_location": "L61",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_bring_your_own_data_part_a_use_a_pre_existing_dataset_no_simulator",
+      "target": "docs_bring_your_own_data_a_3_tell_the_pipeline_about_it_config_only"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/bring_your_own_data.md",
+      "source_location": "L93",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_bring_your_own_data_part_a_use_a_pre_existing_dataset_no_simulator",
+      "target": "docs_bring_your_own_data_a_4_run_train_evaluate"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/bring_your_own_data.md",
+      "source_location": "L132",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_bring_your_own_data_part_a_use_a_pre_existing_dataset_no_simulator",
+      "target": "docs_bring_your_own_data_a_5_what_reads_what"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/bring_your_own_data.md",
+      "source_location": "L149",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_bring_your_own_data_part_b_support_a_file_format_other_than_npz",
+      "target": "docs_bring_your_own_data_b_1_the_single_seam"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/bring_your_own_data.md",
+      "source_location": "L177",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_bring_your_own_data_part_b_support_a_file_format_other_than_npz",
+      "target": "docs_bring_your_own_data_b_2_option_1_quick_swap_one_format_replace_the_body"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/bring_your_own_data.md",
+      "source_location": "L212",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_bring_your_own_data_part_b_support_a_file_format_other_than_npz",
+      "target": "docs_bring_your_own_data_b_3_option_2_a_format_registry_support_several_formats_by_extension"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/bring_your_own_data.md",
+      "source_location": "L319",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_bring_your_own_data_part_b_support_a_file_format_other_than_npz",
+      "target": "docs_bring_your_own_data_b_4_optional_validate_keys_shapes_on_load"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_end_to_end_guide",
+      "target": "docs_end_to_end_guide_hydrabflow_end_to_end_pipeline_guide"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L24",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_end_to_end_guide_hydrabflow_end_to_end_pipeline_guide",
+      "target": "docs_end_to_end_guide_0_prerequisites_install"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L51",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_end_to_end_guide_hydrabflow_end_to_end_pipeline_guide",
+      "target": "docs_end_to_end_guide_1_the_five_stages_at_a_glance"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L79",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_end_to_end_guide_hydrabflow_end_to_end_pipeline_guide",
+      "target": "docs_end_to_end_guide_2_changing_the_simulator"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L218",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_end_to_end_guide_hydrabflow_end_to_end_pipeline_guide",
+      "target": "docs_end_to_end_guide_3_using_conf"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L293",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_end_to_end_guide_hydrabflow_end_to_end_pipeline_guide",
+      "target": "docs_end_to_end_guide_4_adding_a_summarynetwork_that_isn_t_shipped"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L375",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_end_to_end_guide_hydrabflow_end_to_end_pipeline_guide",
+      "target": "docs_end_to_end_guide_5_adding_an_inferencenetwork_that_isn_t_shipped"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L430",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_end_to_end_guide_hydrabflow_end_to_end_pipeline_guide",
+      "target": "docs_end_to_end_guide_6_hyperparameter_tuning"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L473",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_end_to_end_guide_hydrabflow_end_to_end_pipeline_guide",
+      "target": "docs_end_to_end_guide_7_changing_the_values_studied"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L535",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_end_to_end_guide_hydrabflow_end_to_end_pipeline_guide",
+      "target": "docs_end_to_end_guide_8_end_to_end_recap_gaussian_example"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L86",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_end_to_end_guide_2_changing_the_simulator",
+      "target": "docs_end_to_end_guide_2a_write_the_simulator_class"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L144",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_end_to_end_guide_2_changing_the_simulator",
+      "target": "docs_end_to_end_guide_2b_make_it_self_register"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L157",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_end_to_end_guide_2_changing_the_simulator",
+      "target": "docs_end_to_end_guide_2c_add_the_simulator_config"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L177",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_end_to_end_guide_2_changing_the_simulator",
+      "target": "docs_end_to_end_guide_2d_wire_the_adapter_to_your_parameter_observable_names"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L196",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_end_to_end_guide_2_changing_the_simulator",
+      "target": "docs_end_to_end_guide_2e_shape_contract_cheat_sheet"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L206",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_end_to_end_guide_2_changing_the_simulator",
+      "target": "docs_end_to_end_guide_2f_generate_the_dataset"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L268",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_end_to_end_guide_3_using_conf",
+      "target": "docs_end_to_end_guide_run_the_rest_of_the_pipeline"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L248",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_end_to_end_guide_3_using_conf",
+      "target": "docs_end_to_end_guide_three_ways_to_set_a_value"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L301",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_end_to_end_guide_4_adding_a_summarynetwork_that_isn_t_shipped",
+      "target": "docs_end_to_end_guide_step_1_add_a_branch_to_the_factory"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L329",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_end_to_end_guide_4_adding_a_summarynetwork_that_isn_t_shipped",
+      "target": "docs_end_to_end_guide_step_2_only_if_you_need_new_hyperparameters_extend_the_schema"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L351",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_end_to_end_guide_4_adding_a_summarynetwork_that_isn_t_shipped",
+      "target": "docs_end_to_end_guide_step_3_add_a_selectable_config_file"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L367",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_end_to_end_guide_4_adding_a_summarynetwork_that_isn_t_shipped",
+      "target": "docs_end_to_end_guide_use_it"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L380",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_end_to_end_guide_5_adding_an_inferencenetwork_that_isn_t_shipped",
+      "target": "docs_end_to_end_guide_step_1_branch_in_the_factory"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L402",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_end_to_end_guide_5_adding_an_inferencenetwork_that_isn_t_shipped",
+      "target": "docs_end_to_end_guide_step_2_extend_inferencenetworkconfig_if_needed"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L407",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_end_to_end_guide_5_adding_an_inferencenetwork_that_isn_t_shipped",
+      "target": "docs_end_to_end_guide_step_3_selectable_config"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L422",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_end_to_end_guide_5_adding_an_inferencenetwork_that_isn_t_shipped",
+      "target": "docs_end_to_end_guide_use_it_422"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L518",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_end_to_end_guide_7_changing_the_values_studied",
+      "target": "docs_end_to_end_guide_common_edits"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/end_to_end_guide.md",
+      "source_location": "L502",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_end_to_end_guide_7_changing_the_values_studied",
+      "target": "docs_end_to_end_guide_spec_reference_consumed_by_suggest_in_tune_py"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/hyperparameter_tuning.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_hyperparameter_tuning",
+      "target": "docs_hyperparameter_tuning_hyperparameter_tuning"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/hyperparameter_tuning.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_hyperparameter_tuning_hyperparameter_tuning",
+      "target": "docs_hyperparameter_tuning_1_prerequisites"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/hyperparameter_tuning.md",
+      "source_location": "L41",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_hyperparameter_tuning_hyperparameter_tuning",
+      "target": "docs_hyperparameter_tuning_2_run_a_study"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/hyperparameter_tuning.md",
+      "source_location": "L70",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_hyperparameter_tuning_hyperparameter_tuning",
+      "target": "docs_hyperparameter_tuning_3_what_gets_saved"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/hyperparameter_tuning.md",
+      "source_location": "L112",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_hyperparameter_tuning_hyperparameter_tuning",
+      "target": "docs_hyperparameter_tuning_4_run_many_processes_at_once_parallel_tuning"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/hyperparameter_tuning.md",
+      "source_location": "L139",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_hyperparameter_tuning_hyperparameter_tuning",
+      "target": "docs_hyperparameter_tuning_5_reading_the_results"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/hyperparameter_tuning.md",
+      "source_location": "L181",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_hyperparameter_tuning_hyperparameter_tuning",
+      "target": "docs_hyperparameter_tuning_6_changing_what_is_tuned_the_search_space"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/hyperparameter_tuning.md",
+      "source_location": "L240",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_hyperparameter_tuning_hyperparameter_tuning",
+      "target": "docs_hyperparameter_tuning_7_key_config_reference_tuning_group"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/hyperparameter_tuning.md",
+      "source_location": "L255",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_hyperparameter_tuning_hyperparameter_tuning",
+      "target": "docs_hyperparameter_tuning_8_command_recap"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/hyperparameter_tuning.md",
+      "source_location": "L224",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_hyperparameter_tuning_6_changing_what_is_tuned_the_search_space",
+      "target": "docs_hyperparameter_tuning_single_objective_instead_of_rmse_calibration"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/two_moons_pipeline.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_two_moons_pipeline",
+      "target": "docs_two_moons_pipeline_running_a_full_pipeline_with_the_two_moons_simulator"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/two_moons_pipeline.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_two_moons_pipeline_running_a_full_pipeline_with_the_two_moons_simulator",
+      "target": "docs_two_moons_pipeline_0_what_you_re_running"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/two_moons_pipeline.md",
+      "source_location": "L35",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_two_moons_pipeline_running_a_full_pipeline_with_the_two_moons_simulator",
+      "target": "docs_two_moons_pipeline_1_prerequisites"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/two_moons_pipeline.md",
+      "source_location": "L46",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_two_moons_pipeline_running_a_full_pipeline_with_the_two_moons_simulator",
+      "target": "docs_two_moons_pipeline_2_the_four_commands_full_run"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/two_moons_pipeline.md",
+      "source_location": "L135",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_two_moons_pipeline_running_a_full_pipeline_with_the_two_moons_simulator",
+      "target": "docs_two_moons_pipeline_3_fast_smoke_run_1_minute"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/two_moons_pipeline.md",
+      "source_location": "L162",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_two_moons_pipeline_running_a_full_pipeline_with_the_two_moons_simulator",
+      "target": "docs_two_moons_pipeline_4_optional_train_with_observational_noise_augmentations"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/two_moons_pipeline.md",
+      "source_location": "L183",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_two_moons_pipeline_running_a_full_pipeline_with_the_two_moons_simulator",
+      "target": "docs_two_moons_pipeline_5_tuning_the_prior_observation_knobs_optional"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/two_moons_pipeline.md",
+      "source_location": "L201",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_two_moons_pipeline_running_a_full_pipeline_with_the_two_moons_simulator",
+      "target": "docs_two_moons_pipeline_6_command_recap"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/two_moons_pipeline.md",
+      "source_location": "L56",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_two_moons_pipeline_2_the_four_commands_full_run",
+      "target": "docs_two_moons_pipeline_2_1_generate_the_training_set"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/two_moons_pipeline.md",
+      "source_location": "L66",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_two_moons_pipeline_2_the_four_commands_full_run",
+      "target": "docs_two_moons_pipeline_2_2_generate_a_held_out_test_set"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/two_moons_pipeline.md",
+      "source_location": "L81",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_two_moons_pipeline_2_the_four_commands_full_run",
+      "target": "docs_two_moons_pipeline_2_3_train"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/two_moons_pipeline.md",
+      "source_location": "L108",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_two_moons_pipeline_2_the_four_commands_full_run",
+      "target": "docs_two_moons_pipeline_2_4_evaluate"
+    },
+    {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -9899,5 +9946,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "68060cbadc643e4254ca184a03359dc574dae2cc"
+  "built_at_commit": "02bedbf5fad6f604d60dff56cda37fcd6660faae"
 }

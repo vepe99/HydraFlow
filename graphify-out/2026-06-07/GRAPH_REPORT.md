@@ -5,12 +5,12 @@
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 457 nodes · 553 edges · 45 communities (34 shown, 11 thin omitted)
+- 460 nodes · 555 edges · 46 communities (34 shown, 12 thin omitted)
 - Extraction: 86% EXTRACTED · 14% INFERRED · 0% AMBIGUOUS · INFERRED: 76 edges (avg confidence: 0.71)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `68060cba`
+- Built from commit: `02bedbf5`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -52,6 +52,7 @@
 - [[_COMMUNITY_Community 42|Community 42]]
 - [[_COMMUNITY_Community 43|Community 43]]
 - [[_COMMUNITY_Community 44|Community 44]]
+- [[_COMMUNITY_Community 45|Community 45]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `PreprocessStep` - 19 edges
@@ -59,11 +60,11 @@
 3. `build_workflow()` - 11 edges
 4. `TwoMoonsSimulator` - 11 edges
 5. `What You Must Do When Invoked` - 11 edges
-6. `HydraBFlow: SBI Pipeline Template with BayesFlow` - 10 edges
-7. `HydraBFlow — End-to-End Pipeline Guide` - 10 edges
-8. `run_training()` - 10 edges
-9. `SplitStep` - 10 edges
-10. `/graphify` - 10 edges
+6. `run_training()` - 10 edges
+7. `SplitStep` - 10 edges
+8. `/graphify` - 10 edges
+9. `HydraBFlow: SBI Pipeline Template with BayesFlow` - 10 edges
+10. `HydraBFlow — End-to-End Pipeline Guide` - 10 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `_compose_aug()` --calls--> `build_augmentations()`  [INFERRED]
@@ -80,11 +81,11 @@
 ## Import Cycles
 - None detected.
 
-## Communities (45 total, 11 thin omitted)
+## Communities (46 total, 12 thin omitted)
 
 ### Community 0 - "Preprocessing Pipeline & Steps"
-Cohesion: 0.08
-Nodes (28): ABC, PreprocessPipeline, PreprocessStep, Preprocessing step protocol and the pipeline that orchestrates them.  A :class:`, Element-wise (dataset-in, dataset-out) transform with optional fitted state., Estimate any state from ``data`` (train split). Stateless steps leave this empty, Return a transformed copy/view of ``data``., Arrays to persist so the fitted transform can be reloaded. Default: nothing. (+20 more)
+Cohesion: 0.06
+Nodes (31): PreprocessPipeline, PreprocessStep, Preprocessing step protocol and the pipeline that orchestrates them.  A :class:`, Element-wise (dataset-in, dataset-out) transform with optional fitted state., Estimate any state from ``data`` (train split). Stateless steps leave this empty, Return a transformed copy/view of ``data``., Arrays to persist so the fitted transform can be reloaded. Default: nothing., Restore arrays produced by :meth:`state`. (+23 more)
 
 ### Community 1 - "Eval / Checkpoint Stages"
 Cohesion: 0.33
@@ -119,16 +120,16 @@ Cohesion: 0.12
 Nodes (16): graphify Skill Trigger, AST Structural Extraction, EXTRACTED/INFERRED/AMBIGUOUS Audit Trail, Community Detection, Detect Files Step, Existing-Graph Fast Path, Gemini Extraction Backend, God Nodes (+8 more)
 
 ### Community 9 - "Base Simulator Interface"
-Cohesion: 0.16
-Nodes (9): BaseSimulator, Base interface every forward model implements.  A simulator is the ONLY piece a, Abstract forward model. Subclass + register via ``@register_simulator``., Ordered names of the inferred parameters (become ``inference_variables``)., Keys of the observable arrays. One key = single observable; >1 enables fusion., Draw ``n`` prior samples. Returns ``{param_name: (n, 1)}``., Run the forward model on a batch of parameters. Returns ``{observable_key: (n, ., Any (+1 more)
+Cohesion: 0.15
+Nodes (10): ABC, BaseSimulator, Base interface every forward model implements.  A simulator is the ONLY piece a, Abstract forward model. Subclass + register via ``@register_simulator``., Ordered names of the inferred parameters (become ``inference_variables``)., Keys of the observable arrays. One key = single observable; >1 enables fusion., Draw ``n`` prior samples. Returns ``{param_name: (n, 1)}``., Run the forward model on a batch of parameters. Returns ``{observable_key: (n, . (+2 more)
 
 ### Community 10 - "Config Composition Tests"
 Cohesion: 0.15
 Nodes (10): Register all schemas in Hydra's ConfigStore.      Must be called before ``@hydra, register_configs(), cfg(), compose(), compose_cfg(), Shared test fixtures., Compose the root config with the structured schemas registered.      Provides th, Expose the composer so tests can build configs with custom overrides. (+2 more)
 
 ### Community 11 - "Community 11"
-Cohesion: 0.08
-Nodes (24): available_steps(), build_pipeline(), Name -> preprocessing-step registry and pipeline builder., Register a step factory (usually the step class itself) under ``name``., Build a :class:`PreprocessPipeline` from ``cfg.preprocessing`` (a ``Preprocessin, register_step(), available_simulators(), get_simulator() (+16 more)
+Cohesion: 0.13
+Nodes (15): available_steps(), available_simulators(), get_simulator(), Name -> simulator-class registry.  New simulators self-register with the ``@regi, Class decorator registering a :class:`BaseSimulator` subclass under ``name``., Instantiate the simulator selected by ``cfg.simulator`` (a ``SimulatorConfig``)., register_simulator(), BaseSimulator (+7 more)
 
 ### Community 12 - "Dataset IO"
 Cohesion: 0.38
@@ -176,7 +177,7 @@ Nodes (10): feature_dropout(), gaussian_noise(), multiplicative_noise(), Example
 
 ### Community 39 - "Community 39"
 Cohesion: 0.24
-Nodes (4): Per-feature z-score standardization step.  Generalizes the reference project's `, Standardizer, Dataset, ndarray
+Nodes (9): build_pipeline(), Name -> preprocessing-step registry and pipeline builder., Register a step factory (usually the step class itself) under ``name``., Build a :class:`PreprocessPipeline` from ``cfg.preprocessing`` (a ``Preprocessin, register_step(), Preprocessing pipeline: fit/transform/split + state save/load round-trip., test_pipeline_fit_transform_and_split(), test_state_roundtrip() (+1 more)
 
 ### Community 40 - "Community 40"
 Cohesion: 0.40
@@ -187,24 +188,24 @@ Cohesion: 0.67
 Nodes (3): Adapter Default Config, Preprocessing Default Config, Training Default Config
 
 ## Knowledge Gaps
-- **115 isolated node(s):** `Goal`, `Core Design Principles`, `Tech Stack`, `Run stages (5 entry points)`, `What the User Modifies` (+110 more)
+- **116 isolated node(s):** `PreToolUse`, `allow`, `ModelConfig`, `DataConfig`, `TrainingConfig` (+111 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **11 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **12 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `build_pipeline()` connect `Community 11` to `Preprocessing Pipeline & Steps`, `Design Principles & Configs`, `Community 37`?**
-  _High betweenness centrality (0.148) - this node is a cross-community bridge._
-- **Why does `run_training()` connect `Community 37` to `Design Principles & Configs`, `Community 11`, `Example Simulators (Skeleton/TwoMoons)`?**
-  _High betweenness centrality (0.139) - this node is a cross-community bridge._
-- **Why does `PreprocessPipeline` connect `Preprocessing Pipeline & Steps` to `Community 11`?**
-  _High betweenness centrality (0.126) - this node is a cross-community bridge._
+- **Why does `build_pipeline()` connect `Community 39` to `Preprocessing Pipeline & Steps`, `Design Principles & Configs`, `Community 37`?**
+  _High betweenness centrality (0.146) - this node is a cross-community bridge._
+- **Why does `run_training()` connect `Community 37` to `Design Principles & Configs`, `Example Simulators (Skeleton/TwoMoons)`, `Community 39`?**
+  _High betweenness centrality (0.137) - this node is a cross-community bridge._
+- **Why does `PreprocessPipeline` connect `Preprocessing Pipeline & Steps` to `Community 39`?**
+  _High betweenness centrality (0.124) - this node is a cross-community bridge._
 - **Are the 9 inferred relationships involving `PreprocessStep` (e.g. with `Standardizer` and `CastDtype`) actually correct?**
   _`PreprocessStep` has 9 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 8 inferred relationships involving `Dataset` (e.g. with `Standardizer` and `CastDtype`) actually correct?**
   _`Dataset` has 8 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 8 inferred relationships involving `build_workflow()` (e.g. with `run_real_evaluation()` and `run_evaluation()`) actually correct?**
   _`build_workflow()` has 8 INFERRED edges - model-reasoned connections that need verification._
-- **What connects `Goal`, `Core Design Principles`, `Tech Stack` to the rest of the system?**
-  _215 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `PreToolUse`, `allow`, `Marimo notebook: inspect a training run's posterior samples and diagnostics.  Ru` to the rest of the system?**
+  _216 weakly-connected nodes found - possible documentation gaps or missing edges._
